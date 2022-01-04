@@ -51,13 +51,13 @@ export default function Header() {
         <NavLayout>
           <ul>
             <li>
-              <Link to="">HOME</Link>
+              <Link to="/">HOME</Link>
             </li>
             <li>
-              <Link to="">SKILL</Link>
+              <Link to="/skill">SKILL</Link>
             </li>
             <li>
-              <Link to="">PROJECT</Link>
+              <Link to="/project">PROJECT</Link>
             </li>
           </ul>
         </NavLayout>
