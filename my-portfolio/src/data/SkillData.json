@@ -1,0 +1,27 @@
+[
+	{
+		"sortNum" : 1,
+		"skill": "HTML",
+		"percent": 95
+	},
+	{
+		"sortNum" : 2,
+		"skill": "CSS3",
+		"percent": 85
+	},
+	{
+		"sortNum" : 3,
+		"skill": "JavaScript",
+		"percent": 70
+	},
+	{
+		"sortNum" : 4,
+		"skill": "React",
+		"percent": 50
+	},
+	{
+		"sortNum" : 5,
+		"skill": "Photoshop",
+		"percent": 60
+	}
+]

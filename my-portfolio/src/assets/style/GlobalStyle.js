@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
 	div,
 	span,
 	object,
-	iframe,
 	h1,
 	h2,
 	h3,
@@ -122,8 +121,7 @@ const GlobalStyle = createGlobalStyle`
 		border: 0px;
 	}
 	img,
-	fieldset,
-	iframe {
+	fieldset {
 		border: 0 none;
 	}
 	button {
