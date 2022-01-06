@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HeaderLayout = styled.header`
-  background-color: oragne;
+  background-color: #00294f;
 
   .inner {
     display: flex;
@@ -12,7 +12,6 @@ const HeaderLayout = styled.header`
     align-items: center;
     width: 1024px;
     margin: 0 auto;
-    border: 1px solid red;
     box-sizing: border-box;
   }
 
@@ -37,7 +36,7 @@ const NavLayout = styled.nav`
         font-size: 2.5rem;
         padding: 2rem;
         font-weight: 800;
-        color: #000;
+        color: #fff;
       }
     }
   }
@@ -57,7 +56,7 @@ export default function Header() {
               <Link to="/skill">SKILL</Link>
             </li>
             <li>
-              <Link to="/project">PROJECT</Link>
+              <Link to="/project/soonsoo">PROJECT</Link>
             </li>
           </ul>
         </NavLayout>

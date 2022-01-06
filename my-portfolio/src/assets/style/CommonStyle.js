@@ -1,6 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const MainLayout = styled.section`
+  position: relative;
+  min-height: 80vh;
+  font-size: 1.6rem;
+`;
+
+function Main({ children, ...rest }) {
+  return <MainLayout {...rest}>{children}</MainLayout>;
+}
+
 const SectionLayout = styled.section`
   .inner {
     width: 1024px;
@@ -18,7 +28,7 @@ function Section({ children, ...rest }) {
 }
 
 const H3Style = styled.h3`
-  font-size: 2rem;
+  display: none;
 `;
 
 function H3({ children, ...rest }) {
@@ -26,6 +36,7 @@ function H3({ children, ...rest }) {
 }
 
 const CommonStyle = {
+  Main,
   Section,
   H3,
 };

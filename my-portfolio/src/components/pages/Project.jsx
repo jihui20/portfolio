@@ -1,18 +1,23 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import CommonStyle from '../../assets/style/CommonStyle';
+import Soonsoo from './project/Soonsoo';
 import Tab from './project/Tab';
+import Yanadoo from './project/Yanadoo';
 
 export default function Project() {
-  const [activeTab, setActiveTab] = useState('SOONSOO');
+  const { company } = useParams();
+  const [activeTab, setActiveTab] = useState(company);
 
-  const handleClickTab = (tabName) => {
-    setActiveTab(tabName);
-  };
+  useEffect(() => {
+    setActiveTab(company);
+  }, [company]);
 
   return (
     <CommonStyle.Section>
       <CommonStyle.H3>프로젝트</CommonStyle.H3>
-      <Tab handleClickTab={handleClickTab} />
+      <Tab activeTab={activeTab} />
+      {activeTab === 'soonsoo' ? <Soonsoo /> : <Yanadoo />}
     </CommonStyle.Section>
   );
 }

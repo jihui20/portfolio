@@ -6,17 +6,20 @@ import Soonsoo from '../components/pages/project/Soonsoo';
 import Yanadoo from '../components/pages/project/Yanadoo';
 import Skill from '../components/pages/Skill';
 
+import CommonStyle from '../assets/style/CommonStyle';
+
 export default function Router() {
   return (
-    <main>
+    <CommonStyle.Main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/skill" element={<Skill />} />
-        <Route path="/project/*" element={<Project />}>
+        <Route path="/project/:company" element={<Project />} />
+        {/* <Route path="/project/*" element={<Project />}>
           <Route path="soonsoo" element={<Soonsoo />} />
           <Route path="yanadoo" element={<Yanadoo />} />
-        </Route>
+        </Route> */}
       </Routes>
-    </main>
+    </CommonStyle.Main>
   );
 }

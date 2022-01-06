@@ -1,13 +1,20 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import CommonStyle from '../../assets/style/CommonStyle';
-import SkillData from '../../data/SkillData.json'
+import SkillData from '../../data/SkillData.json';
+
+const SkillBox = styled.div`
+  dt {
+    font-weight: 800;
+    font-size: 1.8rem;
+  }
+`;
 
 const ProgressSpan = styled.span`
   position: relative;
   display: block;
   width: 80%;
-  height: 0.5rem;
+  height: 2.5rem;
   background-color: #ccc;
 
   &::after {
@@ -17,14 +24,14 @@ const ProgressSpan = styled.span`
     left: 0;
     width: 0;
     height: 100%;
-    background-color: red;
+    background-color: #fcad3d;
     transition: all 0.3s;
   }
 
   &.active {
     &::after {
       width: ${(props) => props.width || 0}%;
-      transition: all 1s 0.7s;
+      transition: all 0.7s 0.5s;
     }
   }
 `;
@@ -39,11 +46,11 @@ export default function Skill() {
   return (
     <CommonStyle.Section>
       <CommonStyle.H3>스킬</CommonStyle.H3>
-      <div>
+      <SkillBox>
         {SkillData &&
           SkillData.map((list) => {
             return (
-              <dl key={list.sortNum}> 
+              <dl key={list.sortNum}>
                 <dt>{list.skill}</dt>
                 <dd>
                   <ProgressSpan
@@ -52,9 +59,8 @@ export default function Skill() {
                   ></ProgressSpan>
                 </dd>
               </dl>
-            )
-          })
-        }
+            );
+          })}
         <p>
           웹 표준에 맞는 코드 구현이 가능하고, 크로스 브라우징 이슈를 해결하기
           위해
@@ -65,7 +71,7 @@ export default function Skill() {
           <br />
           중입니다.
         </p>
-      </div>
+      </SkillBox>
     </CommonStyle.Section>
   );
 }
