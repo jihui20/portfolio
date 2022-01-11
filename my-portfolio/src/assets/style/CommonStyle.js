@@ -15,7 +15,7 @@ const SectionLayout = styled.section`
   .inner {
     width: 1024px;
     margin: 0 auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 `;
 

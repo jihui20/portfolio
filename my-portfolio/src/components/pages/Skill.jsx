@@ -47,6 +47,16 @@ export default function Skill() {
     <CommonStyle.Section>
       <CommonStyle.H3>스킬</CommonStyle.H3>
       <SkillBox>
+        <p>
+          웹 표준에 맞는 코드 구현이 가능하고, 크로스 브라우징 이슈를 해결하기
+          위해
+          <br />
+          항상 노력합니다. 자바스크립트, 제이쿼리는 간단한 기능 구현 가능 및
+          <br />
+          리액트 프레임워크로 서비스 오픈 후 지속적인 스터디를 통해 스킬업
+          <br />
+          중입니다.
+        </p>
         {SkillData &&
           SkillData.map((list) => {
             return (
@@ -61,16 +71,6 @@ export default function Skill() {
               </dl>
             );
           })}
-        <p>
-          웹 표준에 맞는 코드 구현이 가능하고, 크로스 브라우징 이슈를 해결하기
-          위해
-          <br />
-          항상 노력합니다. 자바스크립트, 제이쿼리는 간단한 기능 구현 가능 및
-          <br />
-          리액트 프레임워크로 서비스 오픈 후 지속적인 스터디를 통해 스킬업
-          <br />
-          중입니다.
-        </p>
       </SkillBox>
     </CommonStyle.Section>
   );
