@@ -1,6 +1,12 @@
-import React from 'react';
+import { useState, useRef } from 'react';
 
 import styled from 'styled-components';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination, Autoplay, Navigation } from 'swiper';
+//style
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/swiper.min.css';
+import 'swiper/components/navigation/navigation.min.css';
 
 const ContentBox = styled.div`
   ol {
@@ -55,6 +61,29 @@ const ContentTitle = styled.p`
 `;
 
 export default function Yanadoo() {
+  const [swiper, setSwiper] = useState(null);
+  const [mainImageIndex, setMainImageIndex] = useState(0);
+
+  SwiperCore.use([Pagination, Autoplay, Navigation]);
+
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+
+  const swiperParams = {
+    navigation: {
+      prevEl: navigationPrevRef.current,
+      nextEl: navigationNextRef.current,
+    },
+    onBeforeInit: (swiper) => {
+      swiper.params.navigation.prevEl = navigationPrevRef.current;
+      swiper.params.navigation.nextEl = navigationNextRef.current;
+      swiper.activeIndex = mainImageIndex;
+      swiper.navigation.update();
+    },
+    onSwiper: setSwiper,
+    onSlideChange: (e) => setMainImageIndex(e.activeIndex),
+  };
+
   return (
     <ContentBox>
       <ol>
@@ -62,7 +91,24 @@ export default function Yanadoo() {
           <ContentTitle>야나두 3.0 프로젝트</ContentTitle>
           <ContentInnerBox>
             <div className="slide-box">
-              <p>슬릭 박스</p>
+              <Swiper {...swiperParams} ref={setSwiper}>
+                <SwiperSlide>1</SwiperSlide>
+                <SwiperSlide>2</SwiperSlide>
+                <button
+                  type="button"
+                  className="btn-slide prev"
+                  ref={navigationPrevRef}
+                >
+                  <em className="blind">PREV</em>
+                </button>
+                <button
+                  type="button"
+                  className="btn-slide next"
+                  ref={navigationNextRef}
+                >
+                  <em className="blind">NEXT</em>
+                </button>
+              </Swiper>
             </div>
             <div className="info-box">
               <p>
@@ -83,7 +129,24 @@ export default function Yanadoo() {
           <ContentTitle>야나두 2.0 어드민 프로젝트</ContentTitle>
           <ContentInnerBox>
             <div className="slide-box">
-              <p>슬릭 박스</p>
+              <Swiper {...swiperParams} ref={setSwiper}>
+                <SwiperSlide>1</SwiperSlide>
+                <SwiperSlide>2</SwiperSlide>
+                <button
+                  type="button"
+                  className="btn-slide prev"
+                  ref={navigationPrevRef}
+                >
+                  <em className="blind">PREV</em>
+                </button>
+                <button
+                  type="button"
+                  className="btn-slide next"
+                  ref={navigationNextRef}
+                >
+                  <em className="blind">NEXT</em>
+                </button>
+              </Swiper>
             </div>
             <div className="info-box">
               <p>
@@ -101,7 +164,24 @@ export default function Yanadoo() {
           <ContentTitle>야나두 1.0 프로젝트</ContentTitle>
           <ContentInnerBox>
             <div className="slide-box">
-              <p>슬릭 박스</p>
+              <Swiper {...swiperParams} ref={setSwiper}>
+                <SwiperSlide>1</SwiperSlide>
+                <SwiperSlide>2</SwiperSlide>
+                <button
+                  type="button"
+                  className="btn-slide prev"
+                  ref={navigationPrevRef}
+                >
+                  <em className="blind">PREV</em>
+                </button>
+                <button
+                  type="button"
+                  className="btn-slide next"
+                  ref={navigationNextRef}
+                >
+                  <em className="blind">NEXT</em>
+                </button>
+              </Swiper>
             </div>
             <div className="info-box">
               <p>
