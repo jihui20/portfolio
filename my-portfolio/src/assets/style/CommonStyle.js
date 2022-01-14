@@ -35,10 +35,24 @@ function H3({ children, ...rest }) {
   return <H3Style {...rest}>{children}</H3Style>;
 }
 
+const IStyle = styled.i`
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+`;
+
+function Blind({ children, ...rest }) {
+  return <IStyle {...rest}>{children}</IStyle>;
+}
+
 const CommonStyle = {
   Main,
   Section,
   H3,
+  Blind,
 };
 
 export default CommonStyle;

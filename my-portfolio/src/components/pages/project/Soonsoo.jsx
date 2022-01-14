@@ -48,8 +48,14 @@ const ContentInnerBox = styled.div`
 
       strong {
         display: block;
+        margin-bottom: .5rem;
         font-size: 1.8rem;
       }
+
+      a{
+      color: #000;
+      border-bottom: .2rem solid #000;
+    }
     }
   }
 `;
@@ -119,7 +125,7 @@ export default function Soonsoo() {
                 </span>
               </p>
               <p>
-                <strong>도메인</strong> http://www.letsgoreading.com/
+                <strong>도메인</strong><a href="http://www.letsgoreading.com/" target="_blank">http://www.letsgoreading.com/</a>
               </p>
               <p>
                 <strong>Front-end</strong> HTML, CSS3, JQuery

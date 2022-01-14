@@ -14,10 +14,14 @@ const ContentBox = styled.div`
 
     li {
       /* list-style-type: decimal; */
-
+      
       padding: 4rem 2rem;
       border: 1px solid #000;
       box-sizing: border-box;
+
+      + li{
+        margin-top: 3rem;
+      }
     }
   }
 `;
@@ -48,8 +52,14 @@ const ContentInnerBox = styled.div`
 
       strong {
         display: block;
+        margin-bottom: .5rem;
         font-size: 1.8rem;
       }
+    }
+
+    a{
+      color: #000;
+      border-bottom: .2rem solid #000;
     }
   }
 `;
@@ -117,10 +127,10 @@ export default function Yanadoo() {
                 휴면회원 해제 등)
               </p>
               <p>
-                <strong>도메인</strong>https://www.yanadoo.co.kr
+                <strong>도메인</strong><a href="https://www.yanadoo.co.kr" target="_blank">https://www.yanadoo.co.kr</a>
               </p>
               <p>
-                <strong>Front-end</strong>React, Sass, HTML, CSS3
+                <strong>Front-end</strong>HTML, CSS3, React, Sass
               </p>
             </div>
           </ContentInnerBox>

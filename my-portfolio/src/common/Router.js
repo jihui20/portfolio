@@ -13,7 +13,7 @@ export default function Router() {
     <CommonStyle.Main>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/skill" element={<Skill />} />
+        <Route path="/skills" element={<Skill />} />
         <Route path="/project/:company" element={<Project />} />
         {/* <Route path="/project/*" element={<Project />}>
           <Route path="soonsoo" element={<Soonsoo />} />
