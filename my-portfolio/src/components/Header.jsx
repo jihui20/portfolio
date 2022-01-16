@@ -68,7 +68,7 @@ const NavLayout = styled.nav`
           &::after {
             width: 50%;
             height: 0.2rem;
-            transition: all 0.3s;
+            transition: all 0.7s;
           }
         }
       }
@@ -82,7 +82,7 @@ export default function Header() {
   function handleScroll() {
     let scrollY = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollY >= 70) {
+    if (scrollY > 0) {
       setScrollActive(true);
     } else {
       setScrollActive(false);

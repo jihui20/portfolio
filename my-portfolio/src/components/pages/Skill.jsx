@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import CommonStyle from '../../assets/style/CommonStyle';
+import SkillData from '../../data/SkillData.json';
 
 import HtmlIco from '../../assets/images/ico_html.png';
 import CssIco from '../../assets/images/ico_css.png';
@@ -34,49 +35,93 @@ const SkillBox = styled.div`
     }
   }
 
-  li {
-    span {
-      display: block;
-      width: 10rem;
-      height: 15rem;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 100%;
-    }
-    &.html {
-      span {
-        background-image: url(${HtmlIco});
-      }
-    }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-    &.css {
-      span {
-        background-image: url(${CssIco});
+    li {
+      flex: 0 1 31%;
+      margin: 1rem 1rem 1rem 0;
+      text-align: center;
+      box-sizing: border-box;
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+
+      div {
+        display: block;
+        width: 10rem;
+        height: 15rem;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100%;
+      }
+
+      &.html {
+        div {
+          background-image: url(${HtmlIco});
+        }
+      }
+
+      &.css3 {
+        div {
+          background-image: url(${CssIco});
+        }
+      }
+
+      &.javascript {
+        div {
+          background-image: url(${JavascriptIco});
+        }
+      }
+
+      &.jquery {
+        div {
+          background-image: url(${JqueryIco});
+        }
+      }
+
+      &.react {
+        div {
+          background-image: url(${ReactIco});
+        }
+      }
+
+      &.photoshop {
+        div {
+          background-image: url(${PhotoshopIco});
+        }
       }
     }
+  }
+`;
 
-    &.javascript {
-      span {
-        background-image: url(${JavascriptIco});
-      }
-    }
+const ProgressSpan = styled.span`
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 2.5rem;
+  margin: 2rem auto 0;
+  background-color: #ccc;
 
-    &.jquery {
-      span {
-        background-image: url(${JqueryIco});
-      }
-    }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fcad3d;
+    transition: all 0.3s;
+  }
 
-    &.react {
-      span {
-        background-image: url(${ReactIco});
-      }
-    }
-
-    &.photoshop {
-      span {
-        background-image: url(${PhotoshopIco});
-      }
+  &.active {
+    &::after {
+      width: ${(props) => props.width || 0}%;
+      transition: all 0.7s 0.5s;
     }
   }
 `;
@@ -100,7 +145,24 @@ export default function Skill() {
           서비스 오픈 후 지속적인 스터디를 통해 스킬업 중입니다.
         </p>
         <ul>
-          <li className="html">
+          {SkillData &&
+            SkillData.map((list) => {
+              return (
+                <li key={list.sortNum} className={list.skill.toLowerCase()}>
+                  <div>
+                    <CommonStyle.Blind>
+                      {list.skill.toLowerCase()}
+                    </CommonStyle.Blind>
+                  </div>
+                  <ProgressSpan
+                    width={list.percent}
+                    className={!isLoading && 'active'}
+                  ></ProgressSpan>
+                </li>
+              );
+            })}
+
+          {/* <li className="html">
             <span>
               <CommonStyle.Blind>html</CommonStyle.Blind>
             </span>
@@ -129,7 +191,7 @@ export default function Skill() {
             <span>
               <CommonStyle.Blind>photoshop</CommonStyle.Blind>
             </span>
-          </li>
+          </li> */}
         </ul>
       </SkillBox>
     </CommonStyle.Section>

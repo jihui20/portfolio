@@ -12,14 +12,14 @@ const ContentBox = styled.div`
   ol {
     /* padding-left: 2rem; */
 
-    li {
+    > li {
       /* list-style-type: decimal; */
-      
+
       padding: 4rem 2rem;
       border: 1px solid #000;
       box-sizing: border-box;
 
-      + li{
+      + li {
         margin-top: 3rem;
       }
     }
@@ -42,24 +42,26 @@ const ContentInnerBox = styled.div`
     flex: 0 1 auto;
     width: 50%;
 
-    p {
-      line-height: 1.4;
-      word-break: keep-all;
+    div {
+      p {
+        line-height: 1.4;
+        word-break: keep-all;
+      }
 
-      + p {
+      + div {
         margin-top: 2rem;
       }
 
       strong {
         display: block;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         font-size: 1.8rem;
       }
     }
 
-    a{
+    a {
       color: #000;
-      border-bottom: .2rem solid #000;
+      border-bottom: 0.2rem solid #000;
     }
   }
 `;
@@ -68,6 +70,18 @@ const ContentTitle = styled.p`
   font-weight: 800;
   font-size: 3rem;
   text-align: center;
+`;
+
+const ProjectContent = styled.ul`
+  li {
+    line-height: 1.5;
+
+    &::before {
+      content: '-';
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
 `;
 
 export default function Yanadoo() {
@@ -121,17 +135,40 @@ export default function Yanadoo() {
               </Swiper>
             </div>
             <div className="info-box">
-              <p>
-                <strong>주요 작업</strong>마이클래스 / 이벤트 / 회원(회원가입,
-                소셜 회원가입 및 로그인, 아이디/비밀번호 찾기, 회원 정보 수정,
-                휴면회원 해제 등)
-              </p>
-              <p>
-                <strong>도메인</strong><a href="https://www.yanadoo.co.kr" target="_blank">https://www.yanadoo.co.kr</a>
-              </p>
-              <p>
-                <strong>Front-end</strong>HTML, CSS3, React, Sass
-              </p>
+              <div>
+                <p>
+                  <strong>주요 작업</strong>
+                </p>
+                <ProjectContent>
+                  <li>회원가입 (일반 / 비회원 수기 결제 / 해외 거주자)</li>
+                  <li>
+                    소셜 로그인 및 회원가입(카카오 / 네이버 / 페이스북 / 애플)
+                  </li>
+                  <li>아이디 , 비밀번호 찾기</li>
+                  <li>휴면 계정 해지</li>
+                  <li>회원 정보 수정</li>
+                  <li>페이지네이션 공통 기능</li>
+                  <li>더보기 버튼 공통 기능</li>
+                  <li>인증 번호 공통 기능</li>
+                  <li>AWS 이미지 업로드</li>
+                  <li>마이클래스 리스트 및 디테일 페이지</li>
+                  <li>이벤트 리스트 및 디테일 페이지</li>
+                </ProjectContent>
+              </div>
+              <div>
+                <p>
+                  <strong>도메인</strong>
+                  <a href="https://www.yanadoo.co.kr" target="_blank">
+                    https://www.yanadoo.co.kr
+                  </a>
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>Front-end</strong>HTML, CSS3, React, Sass
+                </p>
+              </div>
+              <p>{/* <strong>Version Control</strong> Git */}</p>
             </div>
           </ContentInnerBox>
         </li>
