@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const TabBox = styled.div`
-  border: 1px solid orange;
-
   ul {
     display: flex;
     justify-content: flex-start;

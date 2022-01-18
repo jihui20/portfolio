@@ -10,13 +10,15 @@ import 'swiper/components/navigation/navigation.min.css';
 
 const ContentBox = styled.div`
   ol {
-    /* padding-left: 2rem; */
+    margin-top: 3rem;
 
     > li {
       /* list-style-type: decimal; */
 
       padding: 4rem 2rem;
-      border: 1px solid #000;
+      background-color: #fff;
+      border-radius: 2rem;
+      box-shadow: 0.1rem 0.5rem 0.5rem rgb(0, 0, 0, 0.2);
       box-sizing: border-box;
 
       + li {
@@ -196,14 +198,23 @@ export default function Yanadoo() {
               </Swiper>
             </div>
             <div className="info-box">
-              <p>
-                <strong>주요 작업</strong>템플릿 작업(그리드, form, 주요 페이지
-                등)
-              </p>
+              <div>
+                <p>
+                  <strong>주요 작업</strong>템플릿 작업(그리드, form, 주요
+                  페이지 등)
+                </p>
+                <ProjectContent>
+                  <li>템플릿(Grid, Form, Button, library ...)</li>
+                  <li>메인 페이지 레이아웃</li>
+                  <li>로그인 페이지</li>
+                </ProjectContent>
+              </div>
               {/* <p>도메인: https://www.yanadoo.co.kr</p> */}
-              <p>
-                <strong>Front-end</strong>Bootstrap, JQuery
-              </p>
+              <div>
+                <p>
+                  <strong>Front-end</strong>Bootstrap, JQuery
+                </p>
+              </div>
             </div>
           </ContentInnerBox>
         </li>
@@ -231,17 +242,27 @@ export default function Yanadoo() {
               </Swiper>
             </div>
             <div className="info-box">
-              <p>
-                <strong>주요 작업</strong>템플릿 작업(그리드, form, 주요 페이지
-                등)
-              </p>
-              <p>
-                <strong>도메인</strong>https://www.yanadoo.co.kr (현재 중지된
-                도메인)
-              </p>
-              <p>
-                <strong>Front-end</strong>HTML, CSS3, JQuery
-              </p>
+              <div>
+                <p>
+                  <strong>주요 작업</strong>템플릿 작업(그리드, form, 주요
+                  페이지 등)
+                </p>
+                <ProjectContent>
+                  <li>각종 프로모션 랜딩 페이지(평생수강, 야핏, 폐쇄몰 ...)</li>
+                  <li>게시판 페이지</li>
+                  <li>b2b 페이지</li>
+                </ProjectContent>
+              </div>
+              <div>
+                <p>
+                  <strong>도메인</strong>https://www.yanadoo.co.kr (도메인 변경)
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>Front-end</strong>HTML, CSS3, JQuery
+                </p>
+              </div>
             </div>
           </ContentInnerBox>
         </li>

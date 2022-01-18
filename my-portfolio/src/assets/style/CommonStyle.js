@@ -12,6 +12,9 @@ function Main({ children, ...rest }) {
 }
 
 const SectionLayout = styled.section`
+  background-color: ${(props) => (props.bgColor ? props.bgColor : '#fff')};
+  padding: 4rem 0 6rem;
+
   .inner {
     width: 1024px;
     margin: 0 auto;
@@ -20,6 +23,7 @@ const SectionLayout = styled.section`
 `;
 
 function Section({ children, ...rest }) {
+  console.log({ ...rest });
   return (
     <SectionLayout {...rest}>
       <div className="inner">{children}</div>
