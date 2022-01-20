@@ -8,6 +8,9 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 
+import Yanadoo3 from '../../../assets/images/img_yanadoo3.png';
+import Yanadoo2Admin from '../../../assets/images/img_yanadoo2_admin.png';
+
 const ContentBox = styled.div`
   ol {
     margin-top: 3rem;
@@ -86,6 +89,29 @@ const ProjectContent = styled.ul`
   }
 `;
 
+const SwiperSlideBox = styled.picture`
+  display: block;
+  width: 86%;
+  margin-left: 2rem;
+
+  div {
+    position: relative;
+    padding-bottom: 70%;
+    overflow: hidden;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+  }
+`;
+
 export default function Yanadoo() {
   const [swiper, setSwiper] = useState(null);
   const [mainImageIndex, setMainImageIndex] = useState(0);
@@ -118,22 +144,15 @@ export default function Yanadoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                <SwiperSlide>1</SwiperSlide>
-                <SwiperSlide>2</SwiperSlide>
-                <button
-                  type="button"
-                  className="btn-slide prev"
-                  ref={navigationPrevRef}
-                >
-                  <em className="blind">PREV</em>
-                </button>
-                <button
-                  type="button"
-                  className="btn-slide next"
-                  ref={navigationNextRef}
-                >
-                  <em className="blind">NEXT</em>
-                </button>
+                <SwiperSlide>
+                  <SwiperSlideBox>
+                    <div>
+                      <span
+                        style={{ backgroundImage: `url(${Yanadoo3})` }}
+                      ></span>
+                    </div>
+                  </SwiperSlideBox>
+                </SwiperSlide>
               </Swiper>
             </div>
             <div className="info-box">
@@ -179,8 +198,30 @@ export default function Yanadoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                <SwiperSlide>1</SwiperSlide>
-                <SwiperSlide>2</SwiperSlide>
+                <SwiperSlide>
+                  <SwiperSlideBox>
+                    <div>
+                      <span
+                        style={{
+                          backgroundImage: `url(${Yanadoo2Admin})`,
+                          backgroundPosition: '0 50%',
+                        }}
+                      ></span>
+                    </div>
+                  </SwiperSlideBox>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SwiperSlideBox>
+                    <div>
+                      <span
+                        style={{
+                          backgroundImage: `url(${Yanadoo2Admin})`,
+                          backgroundPosition: '0 50%',
+                        }}
+                      ></span>
+                    </div>
+                  </SwiperSlideBox>
+                </SwiperSlide>
                 <button
                   type="button"
                   className="btn-slide prev"
