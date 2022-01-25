@@ -13,7 +13,7 @@ function Main({ children, ...rest }) {
 
 const SectionLayout = styled.section`
   background-color: ${(props) => (props.bgColor ? props.bgColor : '#fff')};
-  padding: 4rem 0 6rem;
+  padding: 4rem 0 10rem;
 
   .inner {
     width: 1024px;

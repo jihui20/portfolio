@@ -8,7 +8,7 @@ const HeaderLayout = styled.header`
   position: relative;
   width: 100%;
   height: 6.4rem;
-  background-color: #00294f;
+  background-color: #1f2426;
   transition: all 0.3s;
 
   .inner {
@@ -23,7 +23,7 @@ const HeaderLayout = styled.header`
   h1 {
     flex: 0 0 25%;
     font-size: 3.5rem;
-    color: #fff;
+    color: #d2d8d9;
   }
 
   &.fixed {
@@ -50,7 +50,7 @@ const NavLayout = styled.nav`
         font-size: 2rem;
         padding: 2rem;
         font-weight: 800;
-        color: #fff;
+        color: #d2d8d9;
 
         &::after {
           content: '';
@@ -61,7 +61,7 @@ const NavLayout = styled.nav`
           width: 0;
           height: 0;
           margin: auto;
-          background-color: #fcad3d;
+          background-color: #d2d8d9;
         }
 
         &.active {

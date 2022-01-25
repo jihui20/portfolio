@@ -27,6 +27,22 @@ const ContentBox = styled.div`
       + li {
         margin-top: 3rem;
       }
+
+      .swiper-container {
+        padding-bottom: 3rem;
+      }
+
+      .swiper-pagination-fraction,
+      .swiper-pagination-custom,
+      .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 0;
+      }
+
+      .swiper-pagination-bullet-active {
+        padding: 0 1rem;
+        background-color: #1f2426;
+        border-radius: 2rem;
+      }
     }
   }
 `;
@@ -40,7 +56,8 @@ const ContentInnerBox = styled.div`
 
   .slide-box {
     flex: 0 1 auto;
-    width: 50%;
+    width: 48%;
+    margin-right: 1rem;
   }
 
   .info-box {
@@ -92,7 +109,8 @@ const ProjectContent = styled.ul`
 const SwiperSlideBox = styled.picture`
   display: block;
   width: 86%;
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
+  margin: 0 auto;
 
   div {
     position: relative;
@@ -122,10 +140,11 @@ export default function Yanadoo() {
   const navigationNextRef = useRef(null);
 
   const swiperParams = {
-    navigation: {
-      prevEl: navigationPrevRef.current,
-      nextEl: navigationNextRef.current,
-    },
+    // navigation: {
+    //   prevEl: navigationPrevRef.current,
+    //   nextEl: navigationNextRef.current,
+    // },
+    pagination: { clickable: true },
     onBeforeInit: (swiper) => {
       swiper.params.navigation.prevEl = navigationPrevRef.current;
       swiper.params.navigation.nextEl = navigationNextRef.current;
@@ -222,7 +241,7 @@ export default function Yanadoo() {
                     </div>
                   </SwiperSlideBox>
                 </SwiperSlide>
-                <button
+                {/* <button
                   type="button"
                   className="btn-slide prev"
                   ref={navigationPrevRef}
@@ -235,14 +254,13 @@ export default function Yanadoo() {
                   ref={navigationNextRef}
                 >
                   <em className="blind">NEXT</em>
-                </button>
+                </button> */}
               </Swiper>
             </div>
             <div className="info-box">
               <div>
                 <p>
-                  <strong>주요 작업</strong>템플릿 작업(그리드, form, 주요
-                  페이지 등)
+                  <strong>주요 작업</strong>
                 </p>
                 <ProjectContent>
                   <li>템플릿(Grid, Form, Button, library ...)</li>
@@ -285,13 +303,13 @@ export default function Yanadoo() {
             <div className="info-box">
               <div>
                 <p>
-                  <strong>주요 작업</strong>템플릿 작업(그리드, form, 주요
-                  페이지 등)
+                  <strong>주요 작업</strong>
                 </p>
                 <ProjectContent>
+                  <li>유지보수</li>
                   <li>각종 프로모션 랜딩 페이지(평생수강, 야핏, 폐쇄몰 ...)</li>
                   <li>게시판 페이지</li>
-                  <li>b2b 페이지</li>
+                  <li>B2B 페이지</li>
                 </ProjectContent>
               </div>
               <div>

@@ -105,7 +105,7 @@ const ProgressSpan = styled.span`
   width: 80%;
   height: 2.5rem;
   margin: 2rem auto 0;
-  background-color: #ccc;
+  background-color: #d2d8d9;
 
   &::after {
     content: '';
@@ -114,7 +114,7 @@ const ProgressSpan = styled.span`
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #fcad3d;
+    background-color: #828c6d;
     transition: all 0.3s;
   }
 

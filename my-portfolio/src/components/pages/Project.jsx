@@ -14,7 +14,7 @@ export default function Project() {
   }, [company]);
 
   return (
-    <CommonStyle.Section bgColor="#eee">
+    <CommonStyle.Section bgColor="#d2d8d9">
       <CommonStyle.H3>프로젝트</CommonStyle.H3>
       <Tab activeTab={activeTab} />
       {activeTab === 'soonsoo' ? <Soonsoo /> : <Yanadoo />}

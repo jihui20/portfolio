@@ -22,9 +22,9 @@ const TabBox = styled.div`
           bottom: 0;
           left: 0;
           width: 100%;
-          height: 0.2rem;
+          height: 0.6rem;
           margin: auto;
-          background-color: #fcad3d;
+          background-color: #828c6d;
         }
 
         a {
@@ -36,7 +36,7 @@ const TabBox = styled.div`
     a {
       display: block;
       padding: 1.5rem;
-      color: #000;
+      color: #1f2426;
       box-sizing: border-box;
     }
   }
