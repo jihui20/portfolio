@@ -150,5 +150,9 @@ const GlobalStyle = createGlobalStyle`
 	textarea {
 		font-family: 'NanumBarunGothic', sans-serif;
 	}
+
+	button > span {
+		position:relative;
+	}
 `;
 export default GlobalStyle;

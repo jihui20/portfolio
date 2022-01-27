@@ -8,6 +8,16 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 
+import Soonsoo01 from '../../../assets/images/img_soonsoo_01.png';
+import Soonsoo02 from '../../../assets/images/img_soonsoo_02.png';
+import Soonsoo03 from '../../../assets/images/img_soonsoo_03.png';
+
+let soonsoo = [
+  { id: 1, url: Soonsoo01 },
+  { id: 2, url: Soonsoo02 },
+  { id: 3, url: Soonsoo03 },
+];
+
 const ContentBox = styled.div`
   ol {
     margin-top: 3rem;
@@ -24,6 +34,22 @@ const ContentBox = styled.div`
       + li {
         margin-top: 3rem;
       }
+
+      .swiper-container {
+        padding-bottom: 3rem;
+      }
+
+      .swiper-pagination-fraction,
+      .swiper-pagination-custom,
+      .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 0;
+      }
+
+      .swiper-pagination-bullet-active {
+        padding: 0 1rem;
+        background-color: #1f2426;
+        border-radius: 2rem;
+      }
     }
   }
 `;
@@ -32,7 +58,7 @@ const ContentInnerBox = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 2.5rem;
 
   .slide-box {
@@ -43,6 +69,7 @@ const ContentInnerBox = styled.div`
   .info-box {
     flex: 0 1 auto;
     width: 50%;
+    margin-top: 1rem;
 
     div {
       p {
@@ -84,6 +111,30 @@ const ProjectContent = styled.ul`
   }
 `;
 
+const SwiperSlideBox = styled.picture`
+  display: block;
+  width: 86%;
+  /* margin-left: 2rem; */
+  margin: 0 auto;
+
+  div {
+    position: relative;
+    padding-bottom: 70%;
+    overflow: hidden;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+  }
+`;
+
 export default function Soonsoo() {
   const [swiper, setSwiper] = useState(null);
   const [mainImageIndex, setMainImageIndex] = useState(0);
@@ -94,10 +145,11 @@ export default function Soonsoo() {
   const navigationNextRef = useRef(null);
 
   const swiperParams = {
-    navigation: {
-      prevEl: navigationPrevRef.current,
-      nextEl: navigationNextRef.current,
-    },
+    // navigation: {
+    //   prevEl: navigationPrevRef.current,
+    //   nextEl: navigationNextRef.current,
+    // },
+    pagination: { clickable: true },
     onBeforeInit: (swiper) => {
       swiper.params.navigation.prevEl = navigationPrevRef.current;
       swiper.params.navigation.nextEl = navigationNextRef.current;
@@ -116,22 +168,22 @@ export default function Soonsoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                <SwiperSlide>1</SwiperSlide>
-                <SwiperSlide>2</SwiperSlide>
-                <button
-                  type="button"
-                  className="btn-slide prev"
-                  ref={navigationPrevRef}
-                >
-                  <em className="blind">PREV</em>
-                </button>
-                <button
-                  type="button"
-                  className="btn-slide next"
-                  ref={navigationNextRef}
-                >
-                  <em className="blind">NEXT</em>
-                </button>
+                {soonsoo &&
+                  soonsoo.map((list) => {
+                    return (
+                      <SwiperSlide key={list.id}>
+                        <SwiperSlideBox>
+                          <div>
+                            <span
+                              style={{
+                                backgroundImage: `url(${list.url})`,
+                              }}
+                            ></span>
+                          </div>
+                        </SwiperSlideBox>
+                      </SwiperSlide>
+                    );
+                  })}
               </Swiper>
             </div>
             <div className="info-box">

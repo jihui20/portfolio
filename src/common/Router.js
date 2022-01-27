@@ -14,7 +14,7 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skill />} />
-        <Route path="/project/:company" element={<Project />} />
+        <Route path="/project" element={<Project />} />
         {/* <Route path="/project/*" element={<Project />}>
           <Route path="soonsoo" element={<Soonsoo />} />
           <Route path="yanadoo" element={<Yanadoo />} />

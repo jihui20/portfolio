@@ -10,6 +10,17 @@ import 'swiper/components/navigation/navigation.min.css';
 
 import Yanadoo3 from '../../../assets/images/img_yanadoo3.png';
 import Yanadoo2Admin from '../../../assets/images/img_yanadoo2_admin.png';
+import Yanadoo101 from '../../../assets/images/img_yanadoo1_01.png';
+import Yanadoo102 from '../../../assets/images/img_yanadoo1_02.png';
+import Yanadoo103 from '../../../assets/images/img_yanadoo1_03.png';
+import Yanadoo104 from '../../../assets/images/img_yanadoo1_04.png';
+
+let yanadoo1 = [
+  { id: 1, url: Yanadoo101 },
+  { id: 2, url: Yanadoo102 },
+  { id: 3, url: Yanadoo103 },
+  { id: 4, url: Yanadoo104 },
+];
 
 const ContentBox = styled.div`
   ol {
@@ -51,7 +62,7 @@ const ContentInnerBox = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 2.5rem;
 
   .slide-box {
@@ -63,6 +74,7 @@ const ContentInnerBox = styled.div`
   .info-box {
     flex: 0 1 auto;
     width: 50%;
+    margin-top: 1rem;
 
     div {
       p {
@@ -282,22 +294,22 @@ export default function Yanadoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                <SwiperSlide>1</SwiperSlide>
-                <SwiperSlide>2</SwiperSlide>
-                <button
-                  type="button"
-                  className="btn-slide prev"
-                  ref={navigationPrevRef}
-                >
-                  <em className="blind">PREV</em>
-                </button>
-                <button
-                  type="button"
-                  className="btn-slide next"
-                  ref={navigationNextRef}
-                >
-                  <em className="blind">NEXT</em>
-                </button>
+                {yanadoo1 &&
+                  yanadoo1.map((list) => {
+                    return (
+                      <SwiperSlide key={list.id}>
+                        <SwiperSlideBox>
+                          <div>
+                            <span
+                              style={{
+                                backgroundImage: `url(${list.url})`,
+                              }}
+                            ></span>
+                          </div>
+                        </SwiperSlideBox>
+                      </SwiperSlide>
+                    );
+                  })}
               </Swiper>
             </div>
             <div className="info-box">

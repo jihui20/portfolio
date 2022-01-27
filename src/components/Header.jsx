@@ -82,7 +82,7 @@ export default function Header() {
   function handleScroll() {
     let scrollY = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollY > 0) {
+    if (scrollY > 50) {
       setScrollActive(true);
     } else {
       setScrollActive(false);

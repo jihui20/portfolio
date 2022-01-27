@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <>
       <ContentBox className="main-col">
-        <div class="inner-col">
+        <div className="inner-col">
           <MainText>
             <span>
               jh

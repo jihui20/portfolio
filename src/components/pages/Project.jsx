@@ -7,16 +7,20 @@ import Yanadoo from './project/Yanadoo';
 
 export default function Project() {
   const { company } = useParams();
-  const [activeTab, setActiveTab] = useState(company);
+  const [activeTab, setActiveTab] = useState('soonsoo');
 
-  useEffect(() => {
-    setActiveTab(company);
-  }, [company]);
+  const handleActiveTab = (activeTab) => {
+    setActiveTab(activeTab);
+  };
+
+  // useEffect(() => {
+  //   setActiveTab(company);
+  // }, [company]);
 
   return (
     <CommonStyle.Section bgColor="#d2d8d9">
       <CommonStyle.H3>프로젝트</CommonStyle.H3>
-      <Tab activeTab={activeTab} />
+      <Tab activeTab={activeTab} handleActiveTab={handleActiveTab} />
       {activeTab === 'soonsoo' ? <Soonsoo /> : <Yanadoo />}
     </CommonStyle.Section>
   );
