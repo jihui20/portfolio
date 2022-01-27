@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.91bebe35.css",
-    "main.js": "/portfolio/static/js/main.c467a951.js",
+    "main.js": "/portfolio/static/js/main.071358cf.js",
     "static/media/NanumBarunGothicLight.ttf": "/portfolio/static/media/NanumBarunGothicLight.644909786861639c2cf6.ttf",
     "static/media/NanumBarunGothicUltraLight.ttf": "/portfolio/static/media/NanumBarunGothicUltraLight.48f4f8e417bc6c695e72.ttf",
     "static/media/NanumBarunGothicBold.ttf": "/portfolio/static/media/NanumBarunGothicBold.d2409cf29861098bad74.ttf",
@@ -14,11 +14,18 @@
     "static/media/NanumBarunGothicBold.woff2": "/portfolio/static/media/NanumBarunGothicBold.c2a11e019ca0d5a53c0f.woff2",
     "static/media/NanumBarunGothic.woff2": "/portfolio/static/media/NanumBarunGothic.325b8bb131f1afa4ea96.woff2",
     "static/media/NanumBarunGothic.eot": "/portfolio/static/media/NanumBarunGothic.d6539610b72d80d4260c.eot",
+    "static/media/img_yanadoo1_01.png": "/portfolio/static/media/img_yanadoo1_01.833c3a4e3577ce0525bc.png",
+    "static/media/img_yanadoo1_02.png": "/portfolio/static/media/img_yanadoo1_02.e5027e3f7f3ef0242636.png",
     "static/media/NanumBarunGothicLight.woff": "/portfolio/static/media/NanumBarunGothicLight.dfead61add9dcffca530.woff",
     "static/media/NanumBarunGothicUltraLight.woff": "/portfolio/static/media/NanumBarunGothicUltraLight.c2b73c714135611987e9.woff",
     "static/media/NanumBarunGothicBold.woff": "/portfolio/static/media/NanumBarunGothicBold.5dcac56b4232c2286b2d.woff",
+    "static/media/img_soonsoo_01.png": "/portfolio/static/media/img_soonsoo_01.6945ac0f59c6f69e0f89.png",
     "static/media/NanumBarunGothic.woff": "/portfolio/static/media/NanumBarunGothic.c8739e9f667abc8bfae7.woff",
     "static/media/img_yanadoo2_admin.png": "/portfolio/static/media/img_yanadoo2_admin.33110bd5690e2b383a27.png",
+    "static/media/img_yanadoo1_03.png": "/portfolio/static/media/img_yanadoo1_03.0cfbf57e24dcf374d692.png",
+    "static/media/img_yanadoo1_04.png": "/portfolio/static/media/img_yanadoo1_04.c625db6bf4f61963c0d4.png",
+    "static/media/img_soonsoo_02.png": "/portfolio/static/media/img_soonsoo_02.a7c9c05919d872eb5ef4.png",
+    "static/media/img_soonsoo_03.png": "/portfolio/static/media/img_soonsoo_03.23a71bd16b2312be0d7d.png",
     "static/media/img_yanadoo3.png": "/portfolio/static/media/img_yanadoo3.b1ae604c21b6b3d6bd1c.png",
     "static/media/ico_photoshop.png": "/portfolio/static/media/ico_photoshop.46e016fb468e352948eb.png",
     "static/media/Raleway-ExtraBold.eot": "/portfolio/static/media/Raleway-ExtraBold.32b58de08ae9081958dc.eot",
@@ -40,10 +47,10 @@
     "static/media/ico_jquery.png": "/portfolio/static/media/ico_jquery.65c7eec1c12657b32035.png",
     "index.html": "/portfolio/index.html",
     "main.91bebe35.css.map": "/portfolio/static/css/main.91bebe35.css.map",
-    "main.c467a951.js.map": "/portfolio/static/js/main.c467a951.js.map"
+    "main.071358cf.js.map": "/portfolio/static/js/main.071358cf.js.map"
   },
   "entrypoints": [
     "static/css/main.91bebe35.css",
-    "static/js/main.c467a951.js"
+    "static/js/main.071358cf.js"
   ]
 }
