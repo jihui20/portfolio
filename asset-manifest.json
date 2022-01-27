@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/jihui.github.io/static/css/main.1689a16a.css",
-    "main.js": "/jihui.github.io/static/js/main.74424d98.js",
+    "main.js": "/jihui.github.io/static/js/main.ef1de720.js",
     "static/media/NanumBarunGothicLight.ttf": "/jihui.github.io/static/media/NanumBarunGothicLight.644909786861639c2cf6.ttf",
     "static/media/NanumBarunGothicUltraLight.ttf": "/jihui.github.io/static/media/NanumBarunGothicUltraLight.48f4f8e417bc6c695e72.ttf",
     "static/media/NanumBarunGothicBold.ttf": "/jihui.github.io/static/media/NanumBarunGothicBold.d2409cf29861098bad74.ttf",
@@ -40,10 +40,10 @@
     "static/media/ico_jquery.png": "/jihui.github.io/static/media/ico_jquery.65c7eec1c12657b32035.png",
     "index.html": "/jihui.github.io/index.html",
     "main.1689a16a.css.map": "/jihui.github.io/static/css/main.1689a16a.css.map",
-    "main.74424d98.js.map": "/jihui.github.io/static/js/main.74424d98.js.map"
+    "main.ef1de720.js.map": "/jihui.github.io/static/js/main.ef1de720.js.map"
   },
   "entrypoints": [
     "static/css/main.1689a16a.css",
-    "static/js/main.74424d98.js"
+    "static/js/main.ef1de720.js"
   ]
 }
