@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import NavData from '../data/NavData.json';
 
@@ -8,7 +8,8 @@ const HeaderLayout = styled.header`
   position: relative;
   width: 100%;
   height: 6.4rem;
-  background-color: #1f2426;
+  /* background-color: #1f2426; */
+  background-color: #fff;
   transition: all 0.3s;
 
   .inner {
@@ -23,7 +24,8 @@ const HeaderLayout = styled.header`
   h1 {
     flex: 0 0 25%;
     font-size: 3.5rem;
-    color: #d2d8d9;
+    /* color: #d2d8d9; */
+    color: #ff7800;
   }
 
   &.fixed {
@@ -50,26 +52,10 @@ const NavLayout = styled.nav`
         font-size: 2rem;
         padding: 2rem;
         font-weight: 800;
-        color: #d2d8d9;
-
-        &::after {
-          content: '';
-          position: absolute;
-          right: 0;
-          bottom: 1rem;
-          left: 0;
-          width: 0;
-          height: 0;
-          margin: auto;
-          background-color: #d2d8d9;
-        }
+        color: #000;
 
         &.active {
-          &::after {
-            width: 50%;
-            height: 0.2rem;
-            transition: all 0.7s;
-          }
+          color: #ff7800;
         }
       }
     }
@@ -82,12 +68,10 @@ export default function Header() {
   function handleScroll() {
     let scrollY = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollY > 50) {
-      setScrollActive(true);
-    } else {
-      setScrollActive(false);
-    }
+    setScrollActive(scrollY > 60);
   }
+
+  console.log(scrollActive);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);

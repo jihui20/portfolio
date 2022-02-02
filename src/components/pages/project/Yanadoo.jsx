@@ -32,7 +32,7 @@ const ContentBox = styled.div`
       padding: 4rem 2rem;
       background-color: #fff;
       border-radius: 2rem;
-      box-shadow: 0.1rem 0.5rem 0.5rem rgb(0, 0, 0, 0.2);
+      box-shadow: 0.1rem 0.5rem 1rem rgb(0, 0, 0, 0.2);
       box-sizing: border-box;
 
       + li {
@@ -171,7 +171,7 @@ export default function Yanadoo() {
     <ContentBox>
       <ol>
         <li>
-          <ContentTitle>야나두 3.0 프로젝트</ContentTitle>
+          <ContentTitle>야나두 3.0 리뉴얼</ContentTitle>
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
@@ -194,22 +194,23 @@ export default function Yanadoo() {
                 <ProjectContent>
                   <li>회원가입 (일반 / 비회원 수기 결제 / 해외 거주자)</li>
                   <li>
-                    소셜 로그인 및 회원가입(카카오 / 네이버 / 페이스북 / 애플)
+                    소셜 회원가입 및 로그인 연동(카카오 / 네이버 / 페이스북 /
+                    애플)
                   </li>
                   <li>아이디 , 비밀번호 찾기</li>
                   <li>휴면 계정 해지</li>
                   <li>회원 정보 수정</li>
-                  <li>페이지네이션 공통 기능</li>
-                  <li>더보기 버튼 공통 기능</li>
-                  <li>인증 번호 공통 기능</li>
-                  <li>AWS 이미지 업로드</li>
-                  <li>마이클래스 리스트 및 디테일 페이지</li>
-                  <li>이벤트 리스트 및 디테일 페이지</li>
+                  <li>공통 페이지네이션 기능</li>
+                  <li>공통 더보기 버튼 기능</li>
+                  <li>공통 문자, 이메일 본인 인증 기능</li>
+                  <li>NICE 본인 인증 연동</li>
+                  <li>이미지 업로드 기능</li>
+                  <li>마이클래스, 이벤트 등의 목록, 상세 화면</li>
                 </ProjectContent>
               </div>
               <div>
                 <p>
-                  <strong>도메인</strong>
+                  <strong>참조 링크</strong>
                   <a href="https://www.yanadoo.co.kr" target="_blank">
                     https://www.yanadoo.co.kr
                   </a>
@@ -217,15 +218,20 @@ export default function Yanadoo() {
               </div>
               <div>
                 <p>
-                  <strong>Front-end</strong>HTML, CSS3, React, Sass
+                  <strong>사용 기술</strong>Git, React, Scss, HTML, CSS3,
+                  JavaScript
                 </p>
               </div>
-              <p>{/* <strong>Version Control</strong> Git */}</p>
+              <div>
+                <p>
+                  <strong>개발 환경</strong>Jira, Confluence
+                </p>
+              </div>
             </div>
           </ContentInnerBox>
         </li>
         <li>
-          <ContentTitle>야나두 2.0 어드민 프로젝트</ContentTitle>
+          <ContentTitle>야나두 어드민 리뉴얼</ContentTitle>
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
@@ -253,20 +259,6 @@ export default function Yanadoo() {
                     </div>
                   </SwiperSlideBox>
                 </SwiperSlide>
-                {/* <button
-                  type="button"
-                  className="btn-slide prev"
-                  ref={navigationPrevRef}
-                >
-                  <em className="blind">PREV</em>
-                </button>
-                <button
-                  type="button"
-                  className="btn-slide next"
-                  ref={navigationNextRef}
-                >
-                  <em className="blind">NEXT</em>
-                </button> */}
               </Swiper>
             </div>
             <div className="info-box">
@@ -275,22 +267,26 @@ export default function Yanadoo() {
                   <strong>주요 작업</strong>
                 </p>
                 <ProjectContent>
-                  <li>템플릿(Grid, Form, Button, library ...)</li>
+                  <li>공통 템플릿(Grid, Form, Button, library ...)</li>
                   <li>메인 페이지 레이아웃</li>
                   <li>로그인 페이지</li>
                 </ProjectContent>
               </div>
-              {/* <p>도메인: https://www.yanadoo.co.kr</p> */}
               <div>
                 <p>
-                  <strong>Front-end</strong>Bootstrap, JQuery
+                  <strong>사용 기술</strong>Git, Bootstrap, JQuery, JavaScript
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>개발 환경</strong>Jira, Confluence
                 </p>
               </div>
             </div>
           </ContentInnerBox>
         </li>
         <li>
-          <ContentTitle>야나두 1.0 프로젝트</ContentTitle>
+          <ContentTitle>야나두 1.0</ContentTitle>
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
@@ -318,20 +314,36 @@ export default function Yanadoo() {
                   <strong>주요 작업</strong>
                 </p>
                 <ProjectContent>
-                  <li>유지보수</li>
-                  <li>각종 프로모션 랜딩 페이지(평생수강, 야핏, 폐쇄몰 ...)</li>
+                  <li>평생수강 페이지</li>
+                  <li>
+                    야핏 페이지
+                    <a
+                      href="https://www.yanadoo.co.kr/promotion-landing/yafitPremium.html"
+                      target="_blank"
+                    >
+                      (링크)
+                    </a>
+                  </li>
+                  <li>각종 프로모션 랜딩 페이지</li>
                   <li>게시판 페이지</li>
                   <li>B2B 페이지</li>
+                  <li>유지보수</li>
                 </ProjectContent>
               </div>
               <div>
                 <p>
-                  <strong>도메인</strong>https://www.yanadoo.co.kr (도메인 변경)
+                  <strong>참조 링크</strong>https://www.yanadoo.co.kr (참조 링크
+                  변경)
                 </p>
               </div>
               <div>
                 <p>
-                  <strong>Front-end</strong>HTML, CSS3, JQuery
+                  <strong>사용 기술</strong>Git, HTML, CSS3, JQuery, JavaScript
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>개발 환경</strong>Jira, Confluence
                 </p>
               </div>
             </div>

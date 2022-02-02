@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const MainLayout = styled.section`
+const MainLayout = styled.main`
   position: relative;
   min-height: 80vh;
   font-size: 1.6rem;
@@ -18,12 +18,10 @@ const SectionLayout = styled.section`
   .inner {
     width: 1024px;
     margin: 0 auto;
-    /* border: 1px solid red; */
   }
 `;
 
 function Section({ children, ...rest }) {
-  console.log({ ...rest });
   return (
     <SectionLayout {...rest}>
       <div className="inner">{children}</div>
@@ -32,7 +30,15 @@ function Section({ children, ...rest }) {
 }
 
 const H3Style = styled.h3`
-  display: none;
+  display: ${({ showType }) => (showType ? showType : 'none')};
+
+  ${({ showType }) =>
+    showType &&
+    css`
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #ff7800;
+    `}
 `;
 
 function H3({ children, ...rest }) {

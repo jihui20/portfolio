@@ -1,6 +1,9 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import Career from './pages/Career';
+import Profile from './pages/Profile';
+import Skill from './pages/Skill';
 
 const ContentBox = styled.section`
   .inner-col {
@@ -10,7 +13,7 @@ const ContentBox = styled.section`
 
   &.main-col {
     position: relative;
-    min-height: 80vh;
+    /* min-height: 80vh; */
     background-color: #6b735c;
     text-align: center;
   }
@@ -34,7 +37,7 @@ const MainText = styled.div`
 export default function Home() {
   return (
     <>
-      <ContentBox className="main-col">
+      {/* <ContentBox className="main-col">
         <div className="inner-col">
           <MainText>
             <span>
@@ -44,16 +47,10 @@ export default function Home() {
             </span>
           </MainText>
         </div>
-      </ContentBox>
-      <ContentBox className="main-col">
-        <p>홈</p>
-      </ContentBox>
-      <ContentBox className="main-col">
-        <p>홈</p>
-      </ContentBox>
-      <ContentBox className="main-col">
-        <p>홈</p>
-      </ContentBox>
+      </ContentBox> */}
+      <Profile />
+      <Career />
+      <Skill />
     </>
   );
 }

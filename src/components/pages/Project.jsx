@@ -7,7 +7,7 @@ import Yanadoo from './project/Yanadoo';
 
 export default function Project() {
   const { company } = useParams();
-  const [activeTab, setActiveTab] = useState('soonsoo');
+  const [activeTab, setActiveTab] = useState('yanadoo');
 
   const handleActiveTab = (activeTab) => {
     setActiveTab(activeTab);
@@ -18,10 +18,10 @@ export default function Project() {
   // }, [company]);
 
   return (
-    <CommonStyle.Section bgColor="#d2d8d9">
+    <CommonStyle.Section bgColor="#fff">
       <CommonStyle.H3>프로젝트</CommonStyle.H3>
       <Tab activeTab={activeTab} handleActiveTab={handleActiveTab} />
-      {activeTab === 'soonsoo' ? <Soonsoo /> : <Yanadoo />}
+      {activeTab === 'yanadoo' ? <Yanadoo /> : <Soonsoo />}
     </CommonStyle.Section>
   );
 }

@@ -6,11 +6,6 @@
   },
   {
     "sortNum": 2,
-    "title": "SKILLS",
-    "path": "/skills"
-  },
-  {
-    "sortNum": 3,
     "title": "PROJECT",
     "path": "/project"
   }

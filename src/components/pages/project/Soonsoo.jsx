@@ -28,7 +28,7 @@ const ContentBox = styled.div`
       padding: 4rem 2rem;
       background-color: #fff;
       border-radius: 2rem;
-      box-shadow: 0.1rem 0.5rem 0.5rem rgb(0, 0, 0, 0.2);
+      box-shadow: 0.1rem 0.5rem 1rem rgb(0, 0, 0, 0.2);
       box-sizing: border-box;
 
       + li {
@@ -207,7 +207,7 @@ export default function Soonsoo() {
               </div>
               <div>
                 <p>
-                  <strong>도메인</strong>
+                  <strong>참조 링크</strong>
                   <a href="http://www.letsgoreading.com/" target="_blank">
                     http://www.letsgoreading.com/
                   </a>
@@ -215,7 +215,7 @@ export default function Soonsoo() {
               </div>
               <div>
                 <p>
-                  <strong>Front-end</strong> HTML, CSS3, JQuery
+                  <strong>Front-end</strong> HTML, CSS3, JQuery, JavaScript
                 </p>
               </div>
             </div>
