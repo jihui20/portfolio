@@ -7,8 +7,7 @@ import styled from 'styled-components';
 const HeaderLayout = styled.header`
   position: relative;
   width: 100%;
-  height: 6.4rem;
-  /* background-color: #1f2426; */
+  height: 7.9rem;
   background-color: #fff;
   transition: all 0.3s;
 
@@ -24,13 +23,18 @@ const HeaderLayout = styled.header`
   h1 {
     flex: 0 0 25%;
     font-size: 3.5rem;
-    /* color: #d2d8d9; */
     color: #ff7800;
+    text-transform: uppercase;
+
+    span {
+      font-size: 2rem;
+    }
   }
 
   &.fixed {
     position: fixed;
     top: 0;
+    box-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.1);
     z-index: 10;
   }
 `;
@@ -49,9 +53,9 @@ const NavLayout = styled.nav`
       a {
         display: block;
         position: relative;
-        font-size: 2rem;
-        padding: 2rem;
-        font-weight: 800;
+        font-size: 1.6rem;
+        padding: 3rem 2rem;
+        font-weight: 300;
         color: #000;
 
         &.active {
@@ -68,10 +72,8 @@ export default function Header() {
   function handleScroll() {
     let scrollY = window.scrollY || document.documentElement.scrollTop;
 
-    setScrollActive(scrollY > 60);
+    setScrollActive(scrollY > 40);
   }
-
-  console.log(scrollActive);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -83,7 +85,9 @@ export default function Header() {
   return (
     <HeaderLayout className={scrollActive ? 'fixed' : ''}>
       <div className="inner">
-        <h1>JH</h1>
+        <h1>
+          jh<span>ui</span>
+        </h1>
         <NavLayout>
           <ul>
             {NavData &&

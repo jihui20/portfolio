@@ -20,15 +20,10 @@ let soonsoo = [
 
 const ContentBox = styled.div`
   ol {
-    margin-top: 3rem;
-
     > li {
-      /* list-style-type: decimal; */
-
-      padding: 4rem 2rem;
+      padding: 4rem 0;
       background-color: #fff;
       border-radius: 2rem;
-      box-shadow: 0.1rem 0.5rem 1rem rgb(0, 0, 0, 0.2);
       box-sizing: border-box;
 
       + li {
@@ -47,8 +42,9 @@ const ContentBox = styled.div`
 
       .swiper-pagination-bullet-active {
         padding: 0 1rem;
-        background-color: #1f2426;
+        background-color: #ff7800;
         border-radius: 2rem;
+        opacity: 0.6;
       }
     }
   }
@@ -63,7 +59,8 @@ const ContentInnerBox = styled.div`
 
   .slide-box {
     flex: 0 1 auto;
-    width: 50%;
+    width: 48%;
+    margin-right: 1rem;
   }
 
   .info-box {
@@ -73,6 +70,7 @@ const ContentInnerBox = styled.div`
 
     div {
       p {
+        font-weight: 300;
         line-height: 1.4;
         word-break: keep-all;
       }
@@ -88,19 +86,35 @@ const ContentInnerBox = styled.div`
     }
     a {
       color: #000;
-      border-bottom: 0.2rem solid #000;
+      border-bottom: 1px solid #000;
     }
   }
 `;
 
 const ContentTitle = styled.p`
+  display: inline-block;
+  position: relative;
   font-weight: 800;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 2.3rem;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1rem;
+    background-color: #ff7800;
+    opacity: 0.6;
+    z-index: -1;
+  }
 `;
 
 const ProjectContent = styled.ul`
   li {
+    font-weight: 300;
     line-height: 1.5;
 
     &::before {
@@ -114,7 +128,6 @@ const ProjectContent = styled.ul`
 const SwiperSlideBox = styled.picture`
   display: block;
   width: 86%;
-  /* margin-left: 2rem; */
   margin: 0 auto;
 
   div {

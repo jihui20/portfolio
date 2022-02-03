@@ -15,8 +15,13 @@ const CareerBox = styled.dl`
 
   dd {
     flex: 0 1 100%;
-    margin: 1rem 0 1.5rem;
-    line-height: 1.5;
+    margin: 1rem 0 3rem 1.5rem;
+    font-weight: 300;
+    line-height: 1.7;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     span {
       display: block;

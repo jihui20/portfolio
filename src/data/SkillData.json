@@ -1,32 +1,88 @@
 [
   {
     "sortNum": 1,
-    "skill": "HTML",
-    "percent": 95
+    "skill": "React",
+    "percent": 50,
+    "infoList": [
+      {
+        "sortNum": 1,
+        "desc": "React, React-router v6을 이용한 반응형 페이지 작업"
+      },
+      {
+        "sortNum": 2,
+        "desc": "환경세팅 및 컴포넌트 분리"
+      },
+      {
+        "sortNum": 2,
+        "desc": "scss, styled-components를 이용한 스타일 작업"
+      }
+    ]
   },
   {
     "sortNum": 2,
-    "skill": "CSS3",
-    "percent": 85
+    "skill": "HTML5",
+    "percent": 95,
+    "infoList": [
+      {
+        "sortNum": 1,
+        "desc": "웹표준, 웹 접근성을 고려한 시멘틱 마크업 작업"
+      }
+    ]
   },
   {
     "sortNum": 3,
-    "skill": "JavaScript",
-    "percent": 60
+    "skill": "CSS3",
+    "percent": 85,
+    "infoList": [
+      {
+        "sortNum": 1,
+        "desc": "CSS3을 이용하여 웹을 디자인"
+      },
+      {
+        "sortNum": 2,
+        "desc": "animation, keyframe을 이용한 애니메이션"
+      },
+      {
+        "sortNum": 2,
+        "desc": "CSS Media Query를 이용한 반응형 작업"
+      }
+    ]
   },
   {
     "sortNum": 4,
-    "skill": "JQuery",
-    "percent": 70
+    "skill": "JavaScript",
+    "percent": 60,
+    "infoList": [
+      {
+        "sortNum": 1,
+        "desc": "ES6 문법 사용"
+      },
+      {
+        "sortNum": 2,
+        "desc": "form 요소 유효성 검사, 네비게이션, 탭 메뉴 등 구현"
+      }
+    ]
   },
   {
     "sortNum": 5,
-    "skill": "React",
-    "percent": 50
+    "skill": "JQuery",
+    "percent": 70,
+    "infoList": [
+      {
+        "sortNum": 1,
+        "desc": "슬라이드 및 풀페이지 등 플러그인 사용 및 동적 표현"
+      }
+    ]
   },
   {
     "sortNum": 6,
     "skill": "Photoshop",
-    "percent": 60
+    "percent": 60,
+    "infoList": [
+      {
+        "sortNum": 1,
+        "desc": "기본적인 크롭 등 디자인 툴 사용"
+      }
+    ]
   }
 ]

@@ -6,6 +6,8 @@ import Profile from './pages/Profile';
 import Skill from './pages/Skill';
 
 const ContentBox = styled.section`
+  margin-bottom: 4rem;
+
   .inner-col {
     width: 1200px;
     margin: 0 auto;
@@ -13,41 +15,38 @@ const ContentBox = styled.section`
 
   &.main-col {
     position: relative;
-    /* min-height: 80vh; */
-    background-color: #6b735c;
+    background-color: #ff7800;
     text-align: center;
+    opacity: 0.6;
   }
 `;
 
 const MainText = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 36rem;
-  margin: auto;
-  font-weight: 800;
+  padding: 8rem 0;
+  font-weight: 500;
   font-family: 'Raleway', sans-serif;
-  font-size: 15rem;
-  color: #1f2426;
+  font-size: 6rem;
+  color: #fff;
   text-transform: uppercase;
+
+  span {
+    display: block;
+    font-weight: 800;
+    font-size: 10rem;
+  }
 `;
 
 export default function Home() {
   return (
     <>
-      {/* <ContentBox className="main-col">
+      <ContentBox className="main-col">
         <div className="inner-col">
           <MainText>
-            <span>
-              jh
-              <br />
-              portfilio
-            </span>
+            <span>LEE JIHUI</span>
+            portfilio
           </MainText>
         </div>
-      </ContentBox> */}
+      </ContentBox>
       <Profile />
       <Career />
       <Skill />

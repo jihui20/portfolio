@@ -9,14 +9,19 @@ const ProfileBox = styled.dl`
   align-items: center;
 
   dt {
-    flex: 0 1 20%;
-    margin-bottom: 1.5rem;
+    flex: 0 1 10%;
+    margin-bottom: 2.5rem;
     font-weight: 800;
   }
 
   dd {
-    flex: 0 1 80%;
+    flex: 0 1 90%;
     margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+
+  a {
+    color: #000;
   }
 `;
 
