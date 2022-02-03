@@ -51,18 +51,24 @@ const SkillListBox = styled.div`
       dd {
         margin-top: 1.5rem;
         font-weight: 300;
+        text-align: left;
+
+        p {
+          padding-left: 1.5rem;
+        }
 
         span {
           display: block;
           margin-bottom: 0.5rem;
           line-height: 1.3;
+          text-indent: -1.5rem;
 
           &::before {
             content: '';
             display: inline-block;
             width: 0.9rem;
             height: 0.5rem;
-            margin: 0.6rem 0.5rem 0 0;
+            margin: 0.45rem 0.5rem 0 0;
             border: 0.2rem solid #000;
             border-top: 0;
             border-right: 0;

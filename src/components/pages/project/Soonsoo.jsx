@@ -127,8 +127,7 @@ const ProjectContent = styled.ul`
 
 const SwiperSlideBox = styled.picture`
   display: block;
-  width: 86%;
-  margin: 0 auto;
+  width: 90%;
 
   div {
     position: relative;

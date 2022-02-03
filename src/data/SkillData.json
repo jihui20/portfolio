@@ -6,14 +6,18 @@
     "infoList": [
       {
         "sortNum": 1,
-        "desc": "React, React-router v6을 이용한 반응형 페이지 작업"
+        "desc": "React, React-router v6을 이용한 싱글 페이지 작업"
       },
       {
         "sortNum": 2,
-        "desc": "환경세팅 및 컴포넌트 분리"
+        "desc": "생명주기 메서드"
       },
       {
-        "sortNum": 2,
+        "sortNum": 3,
+        "desc": "백엔드 및 외부 API 연동"
+      },
+      {
+        "sortNum": 4,
         "desc": "scss, styled-components를 이용한 스타일 작업"
       }
     ]
@@ -43,7 +47,7 @@
         "desc": "animation, keyframe을 이용한 애니메이션"
       },
       {
-        "sortNum": 2,
+        "sortNum": 3,
         "desc": "CSS Media Query를 이용한 반응형 작업"
       }
     ]
@@ -60,6 +64,10 @@
       {
         "sortNum": 2,
         "desc": "form 요소 유효성 검사, 네비게이션, 탭 메뉴 등 구현"
+      },
+      {
+        "sortNum": 3,
+        "desc": "백엔드 및 외부 API 연동"
       }
     ]
   },
