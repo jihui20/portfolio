@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import NavData from '../data/NavData.json';
+import Logo from '../assets/images/ico_logo_310x310.png';
 
 import styled from 'styled-components';
 
@@ -25,6 +26,11 @@ const HeaderLayout = styled.header`
     font-size: 3.5rem;
     color: #ff7800;
     text-transform: uppercase;
+
+    img {
+      width: 5rem;
+      vertical-align: middle;
+    }
 
     span {
       font-size: 2rem;
@@ -86,7 +92,10 @@ export default function Header() {
     <HeaderLayout className={scrollActive ? 'fixed' : ''}>
       <div className="inner">
         <h1>
-          jh<span>ui</span>
+          {/* jh<span>ui</span> */}
+          <Link to="/">
+            <img src={Logo} alt="logo" />
+          </Link>
         </h1>
         <NavLayout>
           <ul>
