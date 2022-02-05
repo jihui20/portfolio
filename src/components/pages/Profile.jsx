@@ -27,28 +27,30 @@ const ProfileBox = styled.dl`
 
     span {
       display: inline-block;
-      position: relative;
       margin-right: 1rem;
       font-weight: 500;
       z-index: 1;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0.5rem;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 0.5rem;
-        background-color: #ff7800;
-        opacity: 0.6;
-        z-index: -1;
-      }
     }
   }
 
   a {
+    display: inline-block;
+    position: relative;
     color: #000;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 0.5rem;
+      background-color: #ff7800;
+      opacity: 0.6;
+      z-index: -1;
+    }
   }
 
   @media ${({ theme }) => theme.device.mobile} {
@@ -65,7 +67,7 @@ const ProfileBox = styled.dl`
 export default function Profile() {
   return (
     <CommonStyle.Section>
-      <CommonStyle.H3 showType="block">프로필</CommonStyle.H3>
+      <CommonStyle.H3 showType="block">profile</CommonStyle.H3>
       <ProfileBox>
         <dt>이름</dt>
         <dd>이지희</dd>
@@ -85,24 +87,22 @@ export default function Profile() {
         <dt>Link</dt>
         <dd>
           <p>
-            <span>포트폴리오 (GitHub)</span>
+            <span>포트폴리오</span>
             <a href="https://jihui20.github.io/portfolio/" target="_blank">
-              https://jihui20.github.io/portfolio/
+              GitHub
             </a>
           </p>
           <p>
-            <span>스터디 (GitHub)</span>
+            <span>스터디</span>
             <a href="https://github.com/jihui20/react-project" target="_blank">
-              https://github.com/jihui20/react-project
+              GitHub
             </a>
-          </p>
-          <p>
-            <span>스터디 (Notion)</span>
+            , &nbsp;
             <a
               href="https://splashy-people-e87.notion.site/4247662e7d3a478c8d17fb2df311685c?v=75578465dd8443b8be8e3c570bbb3a95"
               target="_blank"
             >
-              https://www.notion.so/
+              Notion
             </a>
           </p>
         </dd>

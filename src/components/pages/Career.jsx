@@ -34,7 +34,7 @@ const CareerBox = styled.dl`
 export default function Career() {
   return (
     <CommonStyle.Section>
-      <CommonStyle.H3 showType="block">경력</CommonStyle.H3>
+      <CommonStyle.H3 showType="block">work experience</CommonStyle.H3>
       <CareerBox>
         <dt>야나두</dt>
         <dd>

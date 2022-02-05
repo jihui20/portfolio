@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Career from './pages/Career';
 import Profile from './pages/Profile';
-import Skill from './pages/Skill';
+import Skills from './pages/Skills';
 
 const ContentBox = styled.section`
   margin-bottom: 4rem;
@@ -44,13 +44,13 @@ export default function Home() {
         <div className="inner">
           <MainText>
             <span>LEE JIHUI</span>
-            portfilio
+            portfolio
           </MainText>
         </div>
       </ContentBox>
       <Profile />
       <Career />
-      <Skill />
+      <Skills />
     </>
   );
 }

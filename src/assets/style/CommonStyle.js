@@ -41,6 +41,7 @@ const H3Style = styled.h3`
       margin-bottom: 2rem;
       font-size: 2rem;
       color: #ff7800;
+      text-transform: capitalize;
     `}
 `;
 

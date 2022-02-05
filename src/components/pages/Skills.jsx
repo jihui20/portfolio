@@ -152,7 +152,7 @@ const SkillListBox = styled.div`
 export default function Skill() {
   return (
     <CommonStyle.Section>
-      <CommonStyle.H3 showType="block">스킬</CommonStyle.H3>
+      <CommonStyle.H3 showType="block">skills</CommonStyle.H3>
       <SkillListBox>
         <ul>
           {SkillData &&

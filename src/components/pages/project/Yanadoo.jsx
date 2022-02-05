@@ -248,13 +248,12 @@ export default function Yanadoo() {
               </div>
               <div>
                 <p>
-                  <strong>사용 기술</strong>Git, React, Scss, HTML, CSS3,
-                  JavaScript
+                  <strong>사용 기술</strong>React, Scss, HTML, CSS3, JavaScript
                 </p>
               </div>
               <div>
                 <p>
-                  <strong>개발 환경</strong>Jira, Confluence
+                  <strong>개발 환경</strong>Git, Jira, Confluence
                 </p>
               </div>
             </div>
@@ -304,12 +303,12 @@ export default function Yanadoo() {
               </div>
               <div>
                 <p>
-                  <strong>사용 기술</strong>Git, Bootstrap, JQuery, JavaScript
+                  <strong>사용 기술</strong>Bootstrap, JavaScript, JQuery
                 </p>
               </div>
               <div>
                 <p>
-                  <strong>개발 환경</strong>Jira, Confluence
+                  <strong>개발 환경</strong>Git, Jira, Confluence
                 </p>
               </div>
             </div>
@@ -368,12 +367,12 @@ export default function Yanadoo() {
               </div>
               <div>
                 <p>
-                  <strong>사용 기술</strong>Git, HTML, CSS3, JQuery, JavaScript
+                  <strong>사용 기술</strong>HTML, CSS3, JavaScript, JQuery
                 </p>
               </div>
               <div>
                 <p>
-                  <strong>개발 환경</strong>Jira, Confluence
+                  <strong>개발 환경</strong>Git, Jira, Confluence
                 </p>
               </div>
             </div>

@@ -89,6 +89,20 @@ const ContentInnerBox = styled.div`
       border-bottom: 1px solid #000;
     }
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    .slide-box {
+      flex: 0 1 auto;
+      width: 100%;
+      margin: 0;
+    }
+
+    .info-box {
+      flex: 0 1 auto;
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
 `;
 
 const ContentTitle = styled.p`
@@ -144,6 +158,10 @@ const SwiperSlideBox = styled.picture`
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 100%;
   }
 `;
 
