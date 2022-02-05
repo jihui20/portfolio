@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import CommonStyle from '../../assets/style/CommonStyle';
 
@@ -6,22 +6,59 @@ const ProfileBox = styled.dl`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 
   dt {
-    flex: 0 1 10%;
+    flex: 0 1 auto;
+    width: 10%;
     margin-bottom: 2.5rem;
     font-weight: 800;
   }
 
   dd {
-    flex: 0 1 90%;
-    margin-bottom: 1.5rem;
+    flex: 0 1 auto;
+    width: 90%;
+    margin-bottom: 2.5rem;
     font-weight: 300;
+
+    p {
+      line-height: 1.5;
+    }
+
+    span {
+      display: inline-block;
+      position: relative;
+      margin-right: 1rem;
+      font-weight: 500;
+      z-index: 1;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 0.5rem;
+        background-color: #ff7800;
+        opacity: 0.6;
+        z-index: -1;
+      }
+    }
   }
 
   a {
     color: #000;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    dt {
+      width: 15%;
+    }
+
+    dd {
+      width: 85%;
+    }
   }
 `;
 
@@ -36,11 +73,38 @@ export default function Profile() {
         <dd>010&ndash;9109&ndash;0479</dd>
         <dt>이메일</dt>
         <dd>dlwlgml20@gmail.com</dd>
-        <dt>홈페이지</dt>
+        {/* <dt>Link</dt>
         <dd>
-          <a href="https://jihui20.github.io/portfolio/" target="_blank">
-            https://jihui20.github.io/portfolio/
+          <a
+            href="https://splashy-people-e87.notion.site/4247662e7d3a478c8d17fb2df311685c?v=75578465dd8443b8be8e3c570bbb3a95"
+            target="_blank"
+          >
+            노션 바로가기
           </a>
+        </dd> */}
+        <dt>Link</dt>
+        <dd>
+          <p>
+            <span>포트폴리오 (GitHub)</span>
+            <a href="https://jihui20.github.io/portfolio/" target="_blank">
+              https://jihui20.github.io/portfolio/
+            </a>
+          </p>
+          <p>
+            <span>스터디 (GitHub)</span>
+            <a href="https://github.com/jihui20/react-project" target="_blank">
+              https://github.com/jihui20/react-project
+            </a>
+          </p>
+          <p>
+            <span>스터디 (Notion)</span>
+            <a
+              href="https://splashy-people-e87.notion.site/4247662e7d3a478c8d17fb2df311685c?v=75578465dd8443b8be8e3c570bbb3a95"
+              target="_blank"
+            >
+              https://www.notion.so/
+            </a>
+          </p>
         </dd>
       </ProfileBox>
     </CommonStyle.Section>

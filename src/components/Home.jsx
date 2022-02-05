@@ -8,12 +8,13 @@ import Skill from './pages/Skill';
 const ContentBox = styled.section`
   margin-bottom: 4rem;
 
-  .inner-col {
-    width: 1200px;
+  .inner {
+    max-width: 1024px;
+    width: 100%;
     margin: 0 auto;
   }
 
-  &.main-col {
+  &.main {
     position: relative;
     background-color: #ff7800;
     text-align: center;
@@ -39,8 +40,8 @@ const MainText = styled.div`
 export default function Home() {
   return (
     <>
-      <ContentBox className="main-col">
-        <div className="inner-col">
+      <ContentBox className="main">
+        <div className="inner">
           <MainText>
             <span>LEE JIHUI</span>
             portfilio

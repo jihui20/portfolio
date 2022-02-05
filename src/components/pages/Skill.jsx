@@ -26,7 +26,8 @@ const SkillListBox = styled.div`
     justify-content: space-between;
 
     li {
-      flex: 0 1 31%;
+      flex: 1 0 auto;
+      width: 31%;
       margin: 1rem 1rem 1rem 0;
       font-weight: 800;
       text-align: center;
@@ -51,7 +52,6 @@ const SkillListBox = styled.div`
       dd {
         margin-top: 1.5rem;
         font-weight: 300;
-        text-align: left;
 
         p {
           padding-left: 1.5rem;
@@ -64,16 +64,16 @@ const SkillListBox = styled.div`
           text-indent: -1.5rem;
 
           &::before {
-            content: '';
+            content: '-';
             display: inline-block;
-            width: 0.9rem;
+            /* width: 0.9rem;
             height: 0.5rem;
             margin: 0.45rem 0.5rem 0 0;
             border: 0.2rem solid #000;
             border-top: 0;
             border-right: 0;
             vertical-align: top;
-            transform: rotate(-45deg);
+            transform: rotate(-45deg); */
           }
         }
       }
@@ -111,6 +111,38 @@ const SkillListBox = styled.div`
       &.photoshop {
         .skill-thumb {
           background-image: url(${PhotoshopIco});
+        }
+      }
+    }
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    ul {
+      li {
+        flex: 1 0 auto;
+        width: 47%;
+        margin: 0 1.5rem 1rem 0;
+
+        &:nth-of-type(2n) {
+          margin-right: 0;
+        }
+
+        &:nth-of-type(3n) {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    ul {
+      li {
+        flex: 1 0 auto;
+        width: 100%;
+        margin: 0 0 4rem 0;
+
+        &:nth-of-type(3n) {
+          margin-right: 0;
         }
       }
     }

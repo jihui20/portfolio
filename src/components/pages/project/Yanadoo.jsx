@@ -95,6 +95,20 @@ const ContentInnerBox = styled.div`
       border-bottom: 1px solid #000;
     }
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    .slide-box {
+      flex: 0 1 auto;
+      width: 100%;
+      margin: 0;
+    }
+
+    .info-box {
+      flex: 0 1 auto;
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
 `;
 
 const ContentTitle = styled.p`
@@ -151,6 +165,10 @@ const SwiperSlideBox = styled.picture`
     background-position: 50%;
     background-size: cover;
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 100%;
+  }
 `;
 
 export default function Yanadoo() {
@@ -167,6 +185,7 @@ export default function Yanadoo() {
     //   prevEl: navigationPrevRef.current,
     //   nextEl: navigationNextRef.current,
     // },
+    spaceBetween: 0,
     pagination: { clickable: true },
     onBeforeInit: (swiper) => {
       swiper.params.navigation.prevEl = navigationPrevRef.current;
@@ -278,7 +297,7 @@ export default function Yanadoo() {
                   <strong>주요 작업</strong>
                 </p>
                 <ProjectContent>
-                  <li>공통 템플릿(Grid, Form, Button, library ...)</li>
+                  <li>공통 템플릿(Grid, Form, Button ...)</li>
                   <li>메인 페이지 레이아웃</li>
                   <li>로그인 페이지</li>
                 </ProjectContent>

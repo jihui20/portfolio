@@ -16,8 +16,10 @@ const HeaderLayout = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1024px;
+    max-width: 1024px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 2rem;
     box-sizing: border-box;
   }
 
