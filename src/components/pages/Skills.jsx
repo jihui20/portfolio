@@ -156,7 +156,10 @@ export default function Skill() {
           {SkillData &&
             SkillData.map((list) => {
               return (
-                <li key={list.sortNum} className={list.skill.toLowerCase()}>
+                <li
+                  key={`${list.skill}-${list.sortNum}`}
+                  className={list.skill.toLowerCase()}
+                >
                   <dl>
                     <dt>
                       <span className="skill-thumb">
@@ -170,7 +173,11 @@ export default function Skill() {
                         {list.infoList &&
                           list.infoList.map((infoList) => {
                             return (
-                              <span key={infoList.sortNum}>
+                              <span
+                                key={`${list.skill.toLocaleLowerCase()}-sub-${
+                                  infoList.sortNum
+                                }`}
+                              >
                                 {infoList.desc}
                               </span>
                             );

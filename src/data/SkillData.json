@@ -6,7 +6,7 @@
     "infoList": [
       {
         "sortNum": 1,
-        "desc": "React, React-router v6을 이용한 싱글 페이지 작업"
+        "desc": "React, react-router-dom v6"
       },
       {
         "sortNum": 2,
@@ -63,7 +63,7 @@
       },
       {
         "sortNum": 2,
-        "desc": "form 요소 유효성 검사, 네비게이션, 탭 메뉴 등 구현"
+        "desc": "유효성 검사, 네비게이션, 탭 메뉴 등 구현"
       },
       {
         "sortNum": 3,
@@ -78,7 +78,11 @@
     "infoList": [
       {
         "sortNum": 1,
-        "desc": "슬라이드 및 풀페이지 등 플러그인 사용 및 동적 표현"
+        "desc": "슬라이드 및 풀페이지 등 플러그인 활용"
+      },
+      {
+        "sortNum": 2,
+        "desc": "이벤트 메소드를 사용하여 기능 구현"
       }
     ]
   },

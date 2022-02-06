@@ -87,6 +87,10 @@ const ContentInnerBox = styled.div`
         margin-bottom: 0.5rem;
         font-size: 1.8rem;
       }
+
+      .no-use {
+        text-decoration: line-through;
+      }
     }
 
     a {
@@ -338,8 +342,9 @@ export default function Yanadoo() {
               <div>
                 <p className="project">
                   Bootstrap으로 백오피스 사이트를 리뉴얼 하였습니다. <br />
-                  그리드, 폼, 버튼 등 템플릿을 만들어 작업자가 작업하기 편하도록
-                  제공하였고, 로그인 페이지의 UI 및 애니메이션을 구현하였습니다.
+                  그리드, 폼, 버튼 등 공통 템플릿을 만들어 작업자가 작업하기
+                  편하도록 제공하였고, 로그인 페이지의 UI 및 애니메이션을
+                  구현하였습니다.
                 </p>
               </div>
               <div>
@@ -420,8 +425,9 @@ export default function Yanadoo() {
               </div>
               <div>
                 <p>
-                  <strong>참조 링크</strong>https://www.yanadoo.co.kr (참조 링크
-                  변경)
+                  <strong>참조 링크</strong>
+                  <span className="no-use">https://www.yanadoo.co.kr</span>{' '}
+                  (리뉴얼로 인한 도메인 변경)
                 </p>
               </div>
               <div>
