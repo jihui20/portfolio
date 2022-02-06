@@ -54,12 +54,16 @@ const ProfileBox = styled.dl`
   }
 
   @media ${({ theme }) => theme.device.mobile} {
+    dl {
+      font-size: 1.4rem;
+    }
+
     dt {
-      width: 15%;
+      width: 20%;
     }
 
     dd {
-      width: 85%;
+      width: 80%;
     }
   }
 `;
@@ -88,7 +92,7 @@ export default function Profile() {
         <dd>
           <p>
             <span>포트폴리오</span>
-            <a href="https://jihui20.github.io/portfolio/" target="_blank">
+            <a href="https://github.com/jihui20/portfolio" target="_blank">
               GitHub
             </a>
           </p>

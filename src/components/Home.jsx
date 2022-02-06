@@ -35,6 +35,14 @@ const MainText = styled.div`
     font-weight: 800;
     font-size: 10rem;
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 4rem;
+
+    span {
+      font-size: 6rem;
+    }
+  }
 `;
 
 export default function Home() {

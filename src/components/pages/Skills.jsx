@@ -66,14 +66,6 @@ const SkillListBox = styled.div`
           &::before {
             content: '-';
             display: inline-block;
-            /* width: 0.9rem;
-            height: 0.5rem;
-            margin: 0.45rem 0.5rem 0 0;
-            border: 0.2rem solid #000;
-            border-top: 0;
-            border-right: 0;
-            vertical-align: top;
-            transform: rotate(-45deg); */
           }
         }
       }
@@ -135,6 +127,10 @@ const SkillListBox = styled.div`
   }
 
   @media ${({ theme }) => theme.device.mobile} {
+    p {
+      font-size: 1.4rem;
+    }
+
     ul {
       li {
         flex: 1 0 auto;

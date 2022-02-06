@@ -29,6 +29,15 @@ const CareerBox = styled.dl`
       color: #888;
     }
   }
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 1.4rem;
+
+    dd {
+      span {
+        font-size: 1.2rem;
+      }
+    }
+  }
 `;
 
 export default function Career() {
