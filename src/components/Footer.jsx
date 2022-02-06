@@ -8,6 +8,12 @@ const FooterBox = styled.footer`
   .copyright {
     font-size: 1.7rem;
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    .copyright {
+      font-size: 1.4rem;
+    }
+  }
 `;
 
 export default function Footer() {

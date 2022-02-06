@@ -1,9 +1,8 @@
 import { useState, useRef } from 'react';
-
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Autoplay, Navigation } from 'swiper';
-//style
+
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
@@ -74,6 +73,7 @@ const ContentInnerBox = styled.div`
         line-height: 1.4;
         word-break: keep-all;
       }
+
       + div {
         margin-top: 2rem;
       }
@@ -84,9 +84,28 @@ const ContentInnerBox = styled.div`
         font-size: 1.8rem;
       }
     }
+
     a {
       color: #000;
       border-bottom: 1px solid #000;
+    }
+
+    .project {
+      font-weight: 500;
+      text-indent: -1.5rem;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 0.9rem;
+        height: 0.5rem;
+        margin: 0.45rem 0.5rem 0 0;
+        border: 0.2rem solid #000;
+        border-top: 0;
+        border-right: 0;
+        vertical-align: top;
+        transform: rotate(-45deg);
+      }
     }
   }
 
@@ -101,6 +120,16 @@ const ContentInnerBox = styled.div`
       flex: 0 1 auto;
       width: 100%;
       padding: 0 2rem;
+
+      div {
+        strong {
+          font-size: 1.6rem;
+        }
+      }
+
+      .project {
+        font-size: 1.5rem;
+      }
     }
   }
 `;
@@ -124,18 +153,27 @@ const ContentTitle = styled.p`
     opacity: 0.6;
     z-index: -1;
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 2rem;
+  }
 `;
 
 const ProjectContent = styled.ul`
   li {
     font-weight: 300;
     line-height: 1.5;
+    word-break: keep-all;
 
     &::before {
       content: '-';
       display: inline-block;
       margin-right: 0.5rem;
     }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 1.4rem;
   }
 `;
 
@@ -217,6 +255,13 @@ export default function Soonsoo() {
               </Swiper>
             </div>
             <div className="info-box">
+              <div>
+                <p className="project">
+                  메인 화면, 기프트샵, 상품 구매, 이벤트 및 공지사항 게시판
+                  페이지 등 전체적인 사이트 리뉴얼 작업을 진행하였고, 기존
+                  사이트 운영 및 개발을 진행하였습니다.
+                </p>
+              </div>
               <div>
                 <p>
                   <strong>주요 작업</strong>

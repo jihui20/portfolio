@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import CommonStyle from '../../assets/style/CommonStyle';
 
 const ProfileBox = styled.dl`
@@ -54,9 +55,7 @@ const ProfileBox = styled.dl`
   }
 
   @media ${({ theme }) => theme.device.mobile} {
-    dl {
-      font-size: 1.4rem;
-    }
+    font-size: 1.4rem;
 
     dt {
       width: 20%;

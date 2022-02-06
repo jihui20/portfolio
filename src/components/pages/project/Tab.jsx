@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 
 const TabBox = styled.div`
@@ -17,12 +15,7 @@ const TabBox = styled.div`
 
       &.active {
         button {
-          /* font-weight: 800; */
           color: #ff7800;
-
-          /* &::before {
-            border-color: #ff7800;
-          } */
         }
       }
     }
@@ -35,19 +28,6 @@ const TabBox = styled.div`
       color: #000;
       text-align: left;
       box-sizing: border-box;
-
-      /* &::before {
-        content: '';
-        display: inline-block;
-        width: 0.9rem;
-        height: 0.5rem;
-        margin: 0.3rem 0.5rem 0 0;
-        border: 0.2rem solid #fff;
-        border-top: 0;
-        border-right: 0;
-        vertical-align: top;
-        transform: rotate(-45deg);
-      } */
     }
   }
 `;

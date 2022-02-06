@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
+import styled from 'styled-components';
 import NavData from '../data/NavData.json';
-import Logo from '../assets/images/ico_logo_310x310.png';
+
 import CommonStyle from '../assets/style/CommonStyle';
 
-import styled from 'styled-components';
+import Logo from '../assets/images/ico_logo_310x310.png';
 
 const HeaderLayout = styled.header`
   position: relative;
@@ -184,7 +185,7 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-    }; //  window 에서 스크롤을 감시를 종료
+    };
   });
 
   useEffect(() => {
@@ -195,7 +196,6 @@ export default function Header() {
     <HeaderLayout className={scrollActive ? 'fixed' : ''}>
       <div className="inner">
         <h1>
-          {/* jh<span>ui</span> */}
           <Link to="/">
             <img src={Logo} alt="logo" />
           </Link>

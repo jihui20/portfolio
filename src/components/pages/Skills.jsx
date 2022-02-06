@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import CommonStyle from '../../assets/style/CommonStyle';
 import SkillData from '../../data/SkillData.json';
+
+import CommonStyle from '../../assets/style/CommonStyle';
 
 import HtmlIco from '../../assets/images/ico_html_v2.png';
 import CssIco from '../../assets/images/ico_css_v2.png';
@@ -55,6 +56,7 @@ const SkillListBox = styled.div`
 
         p {
           padding-left: 1.5rem;
+          word-break: keep-all;
         }
 
         span {

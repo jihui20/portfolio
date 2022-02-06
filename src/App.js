@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+
 import Router from './common/Router';
 import ScrollToTop from './common/ScrollToTop';
-import GlobalStyle from './assets/style/GlobalStyle';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { ThemeProvider } from 'styled-components';
+
+import GlobalStyle from './assets/style/GlobalStyle';
 import theme from './assets/style/theme';
 
 export default function App() {

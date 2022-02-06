@@ -1,9 +1,8 @@
 import { useState, useRef } from 'react';
-
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Autoplay, Navigation } from 'swiper';
-//style
+
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
@@ -94,6 +93,24 @@ const ContentInnerBox = styled.div`
       color: #000;
       border-bottom: 1px solid #000;
     }
+
+    .project {
+      font-weight: 500;
+      text-indent: -1.5rem;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 0.9rem;
+        height: 0.5rem;
+        margin: 0.45rem 0.5rem 0 0;
+        border: 0.2rem solid #000;
+        border-top: 0;
+        border-right: 0;
+        vertical-align: top;
+        transform: rotate(-45deg);
+      }
+    }
   }
 
   @media ${({ theme }) => theme.device.mobile} {
@@ -107,6 +124,16 @@ const ContentInnerBox = styled.div`
       flex: 0 1 auto;
       width: 100%;
       padding: 0 2rem;
+
+      div {
+        strong {
+          font-size: 1.6rem;
+        }
+      }
+
+      .project {
+        font-size: 1.5rem;
+      }
     }
   }
 `;
@@ -130,18 +157,27 @@ const ContentTitle = styled.p`
     opacity: 0.6;
     z-index: -1;
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 2rem;
+  }
 `;
 
 const ProjectContent = styled.ul`
   li {
     font-weight: 300;
     line-height: 1.5;
+    word-break: keep-all;
 
     &::before {
       content: '-';
       display: inline-block;
       margin-right: 0.5rem;
     }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 1.4rem;
   }
 `;
 
@@ -218,6 +254,14 @@ export default function Yanadoo() {
             </div>
             <div className="info-box">
               <div>
+                <p className="project">
+                  React 라이브러리로 야나두 메인 사이트를 리뉴얼하였습니다.
+                  <br />
+                  회원가입, 소셜 API 연동 등 전체적인 회원 API 연동을 맡아
+                  개발하였습니다.
+                </p>
+              </div>
+              <div>
                 <p>
                   <strong>주요 작업</strong>
                 </p>
@@ -292,6 +336,13 @@ export default function Yanadoo() {
             </div>
             <div className="info-box">
               <div>
+                <p className="project">
+                  Bootstrap으로 백오피스 사이트를 리뉴얼 하였습니다. <br />
+                  그리드, 폼, 버튼 등 템플릿을 만들어 작업자가 작업하기 편하도록
+                  제공하였고, 로그인 페이지의 UI 및 애니메이션을 구현하였습니다.
+                </p>
+              </div>
+              <div>
                 <p>
                   <strong>주요 작업</strong>
                 </p>
@@ -338,6 +389,14 @@ export default function Yanadoo() {
               </Swiper>
             </div>
             <div className="info-box">
+              <div>
+                <p className="project">
+                  메인 상품 및 이벤트 페이지 등 사이트 내 여러 페이지를 운영 및
+                  개발하였습니다. <br />
+                  이벤트 페이지 내 애니메이션 구현 및 라이브러리 사용, 상담
+                  게시판 등 UI 개발하였습니다.
+                </p>
+              </div>
               <div>
                 <p>
                   <strong>주요 작업</strong>
