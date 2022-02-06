@@ -26,7 +26,8 @@ const HeaderLayout = styled.header`
   }
 
   h1 {
-    flex: 0 0 25%;
+    flex: 0 0 auto;
+    width: 25%;
     font-size: 3.5rem;
     color: #ff7800;
     text-transform: uppercase;
@@ -70,7 +71,7 @@ const HeaderLayout = styled.header`
 
 const NavLayout = styled.nav`
   flex: 0 0 auto;
-  width: 100%;
+  width: 75%;
 
   ul {
     display: flex;
@@ -97,6 +98,7 @@ const NavLayout = styled.nav`
 
   @media ${({ theme }) => theme.device.mobile} {
     display: none;
+    width: 100%;
     background-color: #f5f5f5;
     z-index: 1;
 
