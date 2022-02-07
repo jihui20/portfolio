@@ -1,4 +1,8 @@
-import Yanadoo3_01 from '../assets/images/img_yanadoo3.png';
+import Yanadoo3_01 from '../assets/images/img_yanadoo3_01.png';
+import Yanadoo3_02 from '../assets/images/img_yanadoo3_02.png';
+import Yanadoo3_03 from '../assets/images/img_yanadoo3_03.png';
+import Yanadoo3_04 from '../assets/images/img_yanadoo3_04.png';
+import Yanadoo3_05 from '../assets/images/img_yanadoo3_05.png';
 import Kkultube_01 from '../assets/images/img_kkultube_01.png';
 import Kkultube_02 from '../assets/images/img_kkultube_02.png';
 import YanadooAdmin_01 from '../assets/images/img_yanadoo2_admin_01.png';
@@ -12,7 +16,10 @@ import Yanadoo1_04 from '../assets/images/img_yanadoo1_04.png';
 
 let Yanadoo3 = [
   { id: 1, url: Yanadoo3_01 },
-  { id: 2, url: Yanadoo3_01 },
+  { id: 2, url: Yanadoo3_02 },
+  { id: 3, url: Yanadoo3_03 },
+  { id: 4, url: Yanadoo3_04 },
+  { id: 5, url: Yanadoo3_05 },
 ];
 
 let Kkultube = [

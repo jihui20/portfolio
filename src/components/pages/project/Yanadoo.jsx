@@ -259,6 +259,7 @@ export default function Yanadoo() {
                             <span
                               style={{
                                 backgroundImage: `url(${list.url})`,
+                                backgroundSize: 'auto 100%',
                               }}
                             ></span>
                           </div>
@@ -409,10 +410,9 @@ export default function Yanadoo() {
             <div className="info-box">
               <div>
                 <p className="project">
-                  Bootstrap으로 백오피스 사이트를 리뉴얼 하였습니다. <br />
-                  그리드, 폼, 버튼 등 공통 템플릿을 만들어 작업자가 작업하기
-                  편하도록 제공하였고, 로그인 페이지의 UI 및 애니메이션을
-                  구현하였습니다.
+                  그리드, 폼, 버튼 등 공통 템플릿을 만들어 백엔드 개발자가 해당
+                  템플릿을 이용하여 개발할 수 있도록 제공하였으며 로그인
+                  페이지의 UI 및 애니메이션을 구현하였습니다.
                 </p>
               </div>
               <div>

@@ -5,4 +5,7 @@
 
 ## 사용기술
 
-React, Styled-components, JavaScript, Html5
+**React**
+**Styled-components**
+**JavaScript**
+**Html5**
