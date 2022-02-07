@@ -25,7 +25,7 @@ const ContentBox = styled.section`
 const MainText = styled.div`
   padding: 8rem 0;
   font-weight: 500;
-  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Raleway', sans-serif; */
   font-size: 6rem;
   color: #fff;
   text-transform: uppercase;

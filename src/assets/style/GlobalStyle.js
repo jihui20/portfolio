@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		margin: 0;
 		padding: 0;
-		font: normal normal 10px/1.2 'NanumBarunGothic', sans-serif;
+		font: normal normal 10px/1.2 'SpoqaHanSansNeo', sans-serif;
 	}
 	html,
 	body,
@@ -148,7 +148,7 @@ const GlobalStyle = createGlobalStyle`
 	select,
 	table,
 	textarea {
-		font-family: 'NanumBarunGothic', sans-serif;
+		font-family: 'SpoqaHanSansNeo', sans-serif;
 	}
 
 	button > span {

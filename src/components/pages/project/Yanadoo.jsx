@@ -7,19 +7,24 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 
-import Yanadoo3 from '../../../assets/images/img_yanadoo3.png';
-import Yanadoo2Admin from '../../../assets/images/img_yanadoo2_admin.png';
-import Yanadoo101 from '../../../assets/images/img_yanadoo1_01.png';
-import Yanadoo102 from '../../../assets/images/img_yanadoo1_02.png';
-import Yanadoo103 from '../../../assets/images/img_yanadoo1_03.png';
-import Yanadoo104 from '../../../assets/images/img_yanadoo1_04.png';
+import YanadooImageData from '../../../data/YanadooImageData';
 
-let yanadoo1 = [
-  { id: 1, url: Yanadoo101 },
-  { id: 2, url: Yanadoo102 },
-  { id: 3, url: Yanadoo103 },
-  { id: 4, url: Yanadoo104 },
-];
+// import Yanadoo3 from '../../../assets/images/img_yanadoo3.png';
+// import Kkultube1 from '../../../assets/images/img_kkultube_01.png';
+// import Kkultube2 from '../../../assets/images/img_kkultube_02.png';
+// import Yanadoo104 from '../../../assets/images/img_yanadoo1_04.png';
+// import Yanadoo2Admin from '../../../assets/images/img_yanadoo2_admin.png';
+// import Yanadoo101 from '../../../assets/images/img_yanadoo1_01.png';
+// import Yanadoo102 from '../../../assets/images/img_yanadoo1_02.png';
+// import Yanadoo103 from '../../../assets/images/img_yanadoo1_03.png';
+// import Yanadoo104 from '../../../assets/images/img_yanadoo1_04.png';
+
+// let yanadoo1 = [
+//   { id: 1, url: Yanadoo101 },
+//   { id: 2, url: Yanadoo102 },
+//   { id: 3, url: Yanadoo103 },
+//   { id: 4, url: Yanadoo104 },
+// ];
 
 const ContentBox = styled.div`
   ol {
@@ -245,15 +250,22 @@ export default function Yanadoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                <SwiperSlide>
-                  <SwiperSlideBox>
-                    <div>
-                      <span
-                        style={{ backgroundImage: `url(${Yanadoo3})` }}
-                      ></span>
-                    </div>
-                  </SwiperSlideBox>
-                </SwiperSlide>
+                {YanadooImageData &&
+                  YanadooImageData.Yanadoo3.map((list) => {
+                    return (
+                      <SwiperSlide key={list.id}>
+                        <SwiperSlideBox>
+                          <div>
+                            <span
+                              style={{
+                                backgroundImage: `url(${list.url})`,
+                              }}
+                            ></span>
+                          </div>
+                        </SwiperSlideBox>
+                      </SwiperSlide>
+                    );
+                  })}
               </Swiper>
             </div>
             <div className="info-box">
@@ -308,34 +320,90 @@ export default function Yanadoo() {
           </ContentInnerBox>
         </li>
         <li>
+          <ContentTitle>꿀튜브</ContentTitle>
+          <ContentInnerBox>
+            <div className="slide-box">
+              <Swiper {...swiperParams} ref={setSwiper}>
+                {YanadooImageData &&
+                  YanadooImageData.Kkultube.map((list) => {
+                    return (
+                      <SwiperSlide key={list.id}>
+                        <SwiperSlideBox>
+                          <div>
+                            <span
+                              style={{
+                                backgroundImage: `url(${list.url})`,
+                                backgroundSize: 'auto 100%',
+                              }}
+                            ></span>
+                          </div>
+                        </SwiperSlideBox>
+                      </SwiperSlide>
+                    );
+                  })}
+              </Swiper>
+            </div>
+            <div className="info-box">
+              <div>
+                <p className="project">
+                  유튜브 전용 플랫폼 서비스로 <br />
+                  공통 스타일부터 전체적인 레이아웃까지 모바일 페이지를 작업
+                  진행하였습니다.
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>주요 작업</strong>
+                </p>
+                <ProjectContent>
+                  <li>메인 페이지</li>
+                  <li>이벤트, 공고사항등 게시판 페이지</li>
+                  <li>광고 리스트 페이지</li>
+                </ProjectContent>
+              </div>
+              <div>
+                <p>
+                  <strong>참조 링크</strong>
+                  <a href="https://www.kkultube.co.kr/" target="_blank">
+                    https://www.kkultube.co.kr/
+                  </a>
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>사용 기술</strong>HTML, CSS3, JavaScript, JQuery
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>개발 환경</strong>Git, Jira, Confluence
+                </p>
+              </div>
+            </div>
+          </ContentInnerBox>
+        </li>
+        <li>
           <ContentTitle>야나두 어드민 리뉴얼</ContentTitle>
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                <SwiperSlide>
-                  <SwiperSlideBox>
-                    <div>
-                      <span
-                        style={{
-                          backgroundImage: `url(${Yanadoo2Admin})`,
-                          backgroundPosition: '0 50%',
-                        }}
-                      ></span>
-                    </div>
-                  </SwiperSlideBox>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <SwiperSlideBox>
-                    <div>
-                      <span
-                        style={{
-                          backgroundImage: `url(${Yanadoo2Admin})`,
-                          backgroundPosition: '0 50%',
-                        }}
-                      ></span>
-                    </div>
-                  </SwiperSlideBox>
-                </SwiperSlide>
+                {YanadooImageData &&
+                  YanadooImageData.YanadooAdmin.map((list) => {
+                    return (
+                      <SwiperSlide key={list.id}>
+                        <SwiperSlideBox>
+                          <div>
+                            <span
+                              style={{
+                                backgroundImage: `url(${list.url})`,
+                                backgroundPosition: '0 50%',
+                              }}
+                            ></span>
+                          </div>
+                        </SwiperSlideBox>
+                      </SwiperSlide>
+                    );
+                  })}
               </Swiper>
             </div>
             <div className="info-box">
@@ -375,8 +443,8 @@ export default function Yanadoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                {yanadoo1 &&
-                  yanadoo1.map((list) => {
+                {YanadooImageData &&
+                  YanadooImageData.Yanadoo1.map((list) => {
                     return (
                       <SwiperSlide key={list.id}>
                         <SwiperSlideBox>
