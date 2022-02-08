@@ -40,7 +40,7 @@ const H3Style = styled.h3`
     css`
       margin-bottom: 2rem;
       font-size: 2rem;
-      color: #ff7800;
+      color: #fd9956;
       text-transform: capitalize;
     `}
 `;

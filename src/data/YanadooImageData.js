@@ -13,6 +13,9 @@ import Yanadoo1_01 from '../assets/images/img_yanadoo1_01.png';
 import Yanadoo1_02 from '../assets/images/img_yanadoo1_02.png';
 import Yanadoo1_03 from '../assets/images/img_yanadoo1_03.png';
 import Yanadoo1_04 from '../assets/images/img_yanadoo1_04.png';
+import Soonsoo_01 from '../assets/images/img_soonsoo_01.png';
+import Soonsoo_02 from '../assets/images/img_soonsoo_02.png';
+import Soonsoo_03 from '../assets/images/img_soonsoo_03.png';
 
 let Yanadoo3 = [
   { id: 1, url: Yanadoo3_01 },
@@ -41,11 +44,18 @@ let Yanadoo1 = [
   { id: 4, url: Yanadoo1_04 },
 ];
 
+let Soonsoo = [
+  { id: 1, url: Soonsoo_01 },
+  { id: 2, url: Soonsoo_02 },
+  { id: 3, url: Soonsoo_03 },
+];
+
 const ImageData = {
   Yanadoo3,
   Kkultube,
   YanadooAdmin,
   Yanadoo1,
+  Soonsoo,
 };
 
 export default ImageData;

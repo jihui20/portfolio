@@ -15,7 +15,7 @@ const TabBox = styled.div`
 
       &.active {
         button {
-          color: #ff7800;
+          color: #fd9956;
         }
       }
     }

@@ -30,7 +30,7 @@ const HeaderLayout = styled.header`
     flex: 0 0 auto;
     width: 25%;
     font-size: 3.5rem;
-    color: #ff7800;
+    color: #fd9956;
     text-transform: uppercase;
 
     img {
@@ -91,7 +91,7 @@ const NavLayout = styled.nav`
         color: #000;
 
         &.active {
-          color: #ff7800;
+          color: #fd9956;
         }
       }
     }
@@ -136,7 +136,7 @@ const HamburgerBtn = styled.button`
     display: block;
     width: 2.5rem;
     height: 0.4rem;
-    background-color: #ff7800;
+    background-color: #fd9956;
 
     &::before {
       content: '';
@@ -145,7 +145,7 @@ const HamburgerBtn = styled.button`
       top: -0.7rem;
       width: 2.5rem;
       height: 0.4rem;
-      background-color: #ff7800;
+      background-color: #fd9956;
     }
 
     &::after {
@@ -155,7 +155,7 @@ const HamburgerBtn = styled.button`
       top: 0.7rem;
       width: 2.5rem;
       height: 0.4rem;
-      background-color: #ff7800;
+      background-color: #fd9956;
     }
   }
 `;

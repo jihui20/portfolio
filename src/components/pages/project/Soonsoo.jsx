@@ -7,15 +7,7 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 
-import Soonsoo01 from '../../../assets/images/img_soonsoo_01.png';
-import Soonsoo02 from '../../../assets/images/img_soonsoo_02.png';
-import Soonsoo03 from '../../../assets/images/img_soonsoo_03.png';
-
-let soonsoo = [
-  { id: 1, url: Soonsoo01 },
-  { id: 2, url: Soonsoo02 },
-  { id: 3, url: Soonsoo03 },
-];
+import YanadooImageData from '../../../data/YanadooImageData';
 
 const ContentBox = styled.div`
   ol {
@@ -41,9 +33,8 @@ const ContentBox = styled.div`
 
       .swiper-pagination-bullet-active {
         padding: 0 1rem;
-        background-color: #ff7800;
+        background-color: #fd9956;
         border-radius: 2rem;
-        opacity: 0.6;
       }
     }
   }
@@ -70,6 +61,7 @@ const ContentInnerBox = styled.div`
     div {
       p {
         font-weight: 300;
+        font-size: 1.6rem;
         line-height: 1.4;
         word-break: keep-all;
       }
@@ -82,6 +74,10 @@ const ContentInnerBox = styled.div`
         display: block;
         margin-bottom: 0.5rem;
         font-size: 1.8rem;
+      }
+
+      .no-use {
+        text-decoration: line-through;
       }
     }
 
@@ -122,9 +118,17 @@ const ContentInnerBox = styled.div`
       padding: 0 2rem;
 
       div {
+        p {
+          font-size: 1.4rem;
+        }
+
         strong {
           font-size: 1.6rem;
         }
+      }
+
+      a {
+        font-size: 1.4rem;
       }
 
       .project {
@@ -149,8 +153,7 @@ const ContentTitle = styled.p`
     right: 0;
     width: 100%;
     height: 1rem;
-    background-color: #ff7800;
-    opacity: 0.6;
+    background-color: #fd9956;
     z-index: -1;
   }
 
@@ -236,8 +239,8 @@ export default function Soonsoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                {soonsoo &&
-                  soonsoo.map((list) => {
+                {YanadooImageData &&
+                  YanadooImageData.Soonsoo.map((list) => {
                     return (
                       <SwiperSlide key={list.id}>
                         <SwiperSlideBox>

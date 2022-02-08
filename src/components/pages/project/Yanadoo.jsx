@@ -9,23 +9,6 @@ import 'swiper/components/navigation/navigation.min.css';
 
 import YanadooImageData from '../../../data/YanadooImageData';
 
-// import Yanadoo3 from '../../../assets/images/img_yanadoo3.png';
-// import Kkultube1 from '../../../assets/images/img_kkultube_01.png';
-// import Kkultube2 from '../../../assets/images/img_kkultube_02.png';
-// import Yanadoo104 from '../../../assets/images/img_yanadoo1_04.png';
-// import Yanadoo2Admin from '../../../assets/images/img_yanadoo2_admin.png';
-// import Yanadoo101 from '../../../assets/images/img_yanadoo1_01.png';
-// import Yanadoo102 from '../../../assets/images/img_yanadoo1_02.png';
-// import Yanadoo103 from '../../../assets/images/img_yanadoo1_03.png';
-// import Yanadoo104 from '../../../assets/images/img_yanadoo1_04.png';
-
-// let yanadoo1 = [
-//   { id: 1, url: Yanadoo101 },
-//   { id: 2, url: Yanadoo102 },
-//   { id: 3, url: Yanadoo103 },
-//   { id: 4, url: Yanadoo104 },
-// ];
-
 const ContentBox = styled.div`
   ol {
     > li {
@@ -50,9 +33,8 @@ const ContentBox = styled.div`
 
       .swiper-pagination-bullet-active {
         padding: 0 1rem;
-        background-color: #ff7800;
+        background-color: #fd9956;
         border-radius: 2rem;
-        opacity: 0.6;
       }
     }
   }
@@ -79,6 +61,7 @@ const ContentInnerBox = styled.div`
     div {
       p {
         font-weight: 300;
+        font-size: 1.6rem;
         line-height: 1.4;
         word-break: keep-all;
       }
@@ -135,9 +118,17 @@ const ContentInnerBox = styled.div`
       padding: 0 2rem;
 
       div {
+        p {
+          font-size: 1.4rem;
+        }
+
         strong {
           font-size: 1.6rem;
         }
+      }
+
+      a {
+        font-size: 1.4rem;
       }
 
       .project {
@@ -162,8 +153,7 @@ const ContentTitle = styled.p`
     right: 0;
     width: 100%;
     height: 1rem;
-    background-color: #ff7800;
-    opacity: 0.6;
+    background-color: #fd9956;
     z-index: -1;
   }
 

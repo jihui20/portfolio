@@ -48,8 +48,7 @@ const ProfileBox = styled.dl`
       right: 0;
       width: 100%;
       height: 0.5rem;
-      background-color: #ff7800;
-      opacity: 0.6;
+      background-color: #fd9956;
       z-index: -1;
     }
   }

@@ -16,9 +16,8 @@ const ContentBox = styled.section`
 
   &.main {
     position: relative;
-    background-color: #ff7800;
+    background-color: #fd9956;
     text-align: center;
-    opacity: 0.6;
   }
 `;
 
