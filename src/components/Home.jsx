@@ -5,41 +5,44 @@ import Career from './pages/Career';
 import Profile from './pages/Profile';
 import Skills from './pages/Skills';
 
-const ContentBox = styled.section`
-  margin-bottom: 4rem;
+import CommonStyle from '../assets/style/CommonStyle';
 
-  .inner {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
-  }
+const IntroduceBox = styled.div`
+  width: 80%;
 
-  &.main {
-    position: relative;
-    background-color: #fd9956;
-    text-align: center;
-  }
-`;
+  > p {
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    word-break: keep-all;
 
-const MainText = styled.div`
-  padding: 8rem 0;
-  font-weight: 500;
-  /* font-family: 'Raleway', sans-serif; */
-  font-size: 6rem;
-  color: #fff;
-  text-transform: uppercase;
+    + p {
+      margin-top: 1.5rem;
+    }
 
-  span {
-    display: block;
-    font-weight: 800;
-    font-size: 10rem;
-  }
+    &.name {
+      display: inline-block;
+      position: relative;
+      font-weight: 500;
+      font-size: 4rem;
+      z-index: 1;
 
-  @media ${({ theme }) => theme.device.mobile} {
-    font-size: 4rem;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 1.2rem;
+        background-color: #fd9956;
+        z-index: -1;
+      }
 
-    span {
-      font-size: 6rem;
+      span {
+        font-weight: 300;
+        font-size: 2rem;
+      }
     }
   }
 `;
@@ -47,14 +50,27 @@ const MainText = styled.div`
 export default function Home() {
   return (
     <>
-      <ContentBox className="main">
-        <div className="inner">
-          <MainText>
-            <span>LEE JIHUI</span>
-            portfolio
-          </MainText>
-        </div>
-      </ContentBox>
+      <CommonStyle.Section>
+        <IntroduceBox>
+          <p className="name">
+            이지희<span>Lee Ji Hui</span>
+          </p>
+          <p>
+            퍼블리셔로서 처음 시작을 하여 전체적인 사이트 유지보수 및 프로모션
+            작업을 진행하였고, 전체 사이트 리뉴얼을 진행하면서 주문/결제,
+            기프트샵, 공지사항 및 이벤트 페이지 등 전체적인 페이지 UI 작업을 한
+            경험이 있습니다.
+          </p>
+          <p>
+            야나두에서는 메인 상품을 포함한 여러 페이지들을 운영 및 개발하였고,
+            백오피스 사이트 리뉴얼을 위해 부트스트랩을 이용하여 공통 템플릿을
+            개발 후 작업자들에게 제공할 수 있도록 했습니다.
+            <br />
+            최근에는 Jquery로 개발되어 있는 기존 야나두 사이트를 걷어내고 새롭게
+            리액트를 이용하여 개발하였고, 현재 오픈 후 서비스 중에 있습니다.
+          </p>
+        </IntroduceBox>
+      </CommonStyle.Section>
       <Profile />
       <Career />
       <Skills />

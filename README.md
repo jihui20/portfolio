@@ -5,7 +5,7 @@
 
 ## 사용기술
 
-**React**
-**Styled-components**
-**JavaScript**
+**React**  
+**Styled-components**  
+**JavaScript**  
 **Html5**

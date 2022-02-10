@@ -71,21 +71,10 @@ export default function Profile() {
     <CommonStyle.Section>
       <CommonStyle.H3 showType="block">profile</CommonStyle.H3>
       <ProfileBox>
-        <dt>이름</dt>
-        <dd>이지희</dd>
         <dt>연락처</dt>
         <dd>010&ndash;9109&ndash;0479</dd>
         <dt>이메일</dt>
         <dd>dlwlgml20@gmail.com</dd>
-        {/* <dt>Link</dt>
-        <dd>
-          <a
-            href="https://splashy-people-e87.notion.site/4247662e7d3a478c8d17fb2df311685c?v=75578465dd8443b8be8e3c570bbb3a95"
-            target="_blank"
-          >
-            노션 바로가기
-          </a>
-        </dd> */}
         <dt>Link</dt>
         <dd>
           <p>
