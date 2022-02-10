@@ -15,6 +15,7 @@ const IntroduceBox = styled.div`
     font-size: 1.7rem;
     line-height: 1.5;
     word-break: keep-all;
+    text-indent: 1.5rem;
 
     + p {
       margin-top: 1.5rem;
@@ -25,6 +26,7 @@ const IntroduceBox = styled.div`
       position: relative;
       font-weight: 500;
       font-size: 4rem;
+      text-indent: 0;
       z-index: 1;
 
       &::after {
@@ -45,6 +47,22 @@ const IntroduceBox = styled.div`
       }
     }
   }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 100%;
+
+    > p {
+      font-size: 1.5rem;
+
+      &.name {
+        font-size: 3.5rem;
+
+        span {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
 `;
 
 export default function Home() {
@@ -56,7 +74,7 @@ export default function Home() {
             이지희<span>Lee Ji Hui</span>
           </p>
           <p>
-            퍼블리셔로서 처음 시작을 하여 전체적인 사이트 유지보수 및 프로모션
+            퍼블리셔로서 처음 시작을 하여 전체적인 사이트 유지 보수 및 프로모션
             작업을 진행하였고, 전체 사이트 리뉴얼을 진행하면서 주문/결제,
             기프트샵, 공지사항 및 이벤트 페이지 등 전체적인 페이지 UI 작업을 한
             경험이 있습니다.
