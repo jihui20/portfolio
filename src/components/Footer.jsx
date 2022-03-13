@@ -16,6 +16,7 @@ const FooterBox = styled.footer`
   }
 `;
 
+
 export default function Footer() {
   return (
     <FooterBox>
