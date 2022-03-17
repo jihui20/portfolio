@@ -90,7 +90,7 @@ export default function Profile() {
             </a>
             , &nbsp;
             <a
-              href="https://splashy-people-e87.notion.site/4247662e7d3a478c8d17fb2df311685c?v=75578465dd8443b8be8e3c570bbb3a95"
+              href="https://splashy-people-e87.notion.site/STUDY-f8fcba9f746b41a8a1b25f82e5585871"
               target="_blank"
             >
               Notion
