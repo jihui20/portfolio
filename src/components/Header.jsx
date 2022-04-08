@@ -178,7 +178,7 @@ export default function Header() {
   function handleScroll() {
     let scrollY = window.scrollY || document.documentElement.scrollTop;
 
-    setScrollActive(scrollY > 40);
+    setScrollActive(scrollY > 0);
   }
 
   useEffect(() => {

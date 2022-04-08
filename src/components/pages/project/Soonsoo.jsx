@@ -293,7 +293,7 @@ export default function Soonsoo() {
               </div>
               <div>
                 <p>
-                  <strong>Front-end</strong> HTML, CSS3, JQuery, JavaScript
+                  <strong>사용 기술</strong> HTML, CSS3, JQuery, JavaScript
                 </p>
               </div>
             </div>
