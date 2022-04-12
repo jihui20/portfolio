@@ -101,7 +101,7 @@ const NavLayout = styled.nav`
     display: none;
     width: 100%;
     background-color: #f5f5f5;
-    z-index: 1;
+    z-index: 10;
 
     ul {
       justify-content: flex-start;
