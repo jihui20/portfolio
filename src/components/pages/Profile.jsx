@@ -85,7 +85,7 @@ export default function Profile() {
           </p>
           <p>
             <span>스터디</span>
-            <a href="https://github.com/jihui20/react-project" target="_blank">
+            <a href="https://github.com/jihui20/study" target="_blank">
               GitHub
             </a>
             , &nbsp;
