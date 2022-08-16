@@ -62,7 +62,7 @@ export default function Career() {
       <CommonStyle.H3 showType="block">work experience</CommonStyle.H3>
       <CareerBox>
         <dt>
-          야나두 <span>2019년 6월 &ndash; 현재 (2년 8개월)</span>
+          야나두 <span>2019년 6월 &ndash; 2022년 6월 (3년)</span>
         </dt>
         <dd>
           메인 상품 및 이벤트 페이지 등 사이트 내 여러 페이지를 운영 및

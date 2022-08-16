@@ -49,7 +49,7 @@ const ContentInnerBox = styled.div`
 
   .slide-box {
     flex: 0 1 auto;
-    width: 48%;
+    width: 46%;
     margin-right: 1rem;
   }
 
@@ -182,7 +182,7 @@ const ProjectContent = styled.ul`
 
 const SwiperSlideBox = styled.picture`
   display: block;
-  width: 90%;
+  width: 100%;
 
   div {
     position: relative;
