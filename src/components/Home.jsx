@@ -88,7 +88,7 @@ export default function Home() {
             React.js를 이용하여 새롭게 개발하였고, 현재 오픈 후 서비스 중에 있습니다.
           </p>
           <p>
-            현재는 위메프에서 기존 사이트 운영 및 개편 작업을 진행중입니다.
+            현재는 위메프에서 메인 사이트 운영 및 개편 작업을 진행중입니다.
           </p>
         </IntroduceBox>
       </CommonStyle.Section>
