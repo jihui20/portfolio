@@ -62,6 +62,13 @@ export default function Career() {
       <CommonStyle.H3 showType="block">work experience</CommonStyle.H3>
       <CareerBox>
         <dt>
+          위메프 <span>2022년 6월 &ndash; 현재</span>
+        </dt>
+        <dd>
+          위메프 메인 사이트의 운영 및 유지 보수 개발 진행중입니다.<br />
+          또한 기존 레거시 시스템을 React.js, Next.js 기반으로 개편 작업중이며, 회원가입 페이지를 담당하고 있습니다.
+        </dd>
+        <dt>
           야나두 <span>2019년 6월 &ndash; 2022년 6월 (3년)</span>
         </dt>
         <dd>
