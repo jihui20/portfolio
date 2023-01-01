@@ -7,7 +7,7 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/swiper.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 
-import YanadooImageData from '../../../data/YanadooImageData';
+import ImageData from '../../../data/ImageData';
 
 const ContentBox = styled.div`
   ol {
@@ -207,7 +207,7 @@ const SwiperSlideBox = styled.picture`
 `;
 
 export default function Yanadoo() {
-  const [swiper, setSwiper] = useState(null);
+  const [, setSwiper] = useState(null);
   const [mainImageIndex, setMainImageIndex] = useState(0);
 
   SwiperCore.use([Pagination, Autoplay, Navigation]);
@@ -240,8 +240,8 @@ export default function Yanadoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                {YanadooImageData &&
-                  YanadooImageData.Yanadoo3.map((list) => {
+                {ImageData &&
+                  ImageData.Yanadoo3.map((list) => {
                     return (
                       <SwiperSlide key={list.id}>
                         <SwiperSlideBox>
@@ -292,7 +292,7 @@ export default function Yanadoo() {
               <div>
                 <p>
                   <strong>참조 링크</strong>
-                  <a href="https://www.yanadoo.co.kr" target="_blank">
+                  <a href="https://www.yanadoo.co.kr" rel="noreferrer" target="_blank">
                     https://www.yanadoo.co.kr
                   </a>
                 </p>
@@ -315,8 +315,8 @@ export default function Yanadoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                {YanadooImageData &&
-                  YanadooImageData.Kkultube.map((list) => {
+                {ImageData &&
+                  ImageData.Kkultube.map((list) => {
                     return (
                       <SwiperSlide key={list.id}>
                         <SwiperSlideBox>
@@ -355,7 +355,7 @@ export default function Yanadoo() {
               <div>
                 <p>
                   <strong>참조 링크</strong>
-                  <a href="https://www.kkultube.co.kr/" target="_blank">
+                  <a href="https://www.kkultube.co.kr/" rel="noreferrer" target="_blank">
                     https://www.kkultube.co.kr/
                   </a>
                 </p>
@@ -378,8 +378,8 @@ export default function Yanadoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                {YanadooImageData &&
-                  YanadooImageData.YanadooAdmin.map((list) => {
+                {ImageData &&
+                  ImageData.YanadooAdmin.map((list) => {
                     return (
                       <SwiperSlide key={list.id}>
                         <SwiperSlideBox>
@@ -433,8 +433,8 @@ export default function Yanadoo() {
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
-                {YanadooImageData &&
-                  YanadooImageData.Yanadoo1.map((list) => {
+                {ImageData &&
+                  ImageData.Yanadoo1.map((list) => {
                     return (
                       <SwiperSlide key={list.id}>
                         <SwiperSlideBox>
@@ -470,6 +470,7 @@ export default function Yanadoo() {
                     야핏 페이지
                     <a
                       href="https://www.yanadoo.co.kr/promotion-landing/yafitPremium.html"
+                      rel="noreferrer"
                       target="_blank"
                     >
                       (링크)

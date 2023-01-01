@@ -206,7 +206,7 @@ const SwiperSlideBox = styled.picture`
   }
 `;
 
-export default function Soonsoo() {
+export default function Wemakeprice() {
   const [, setSwiper] = useState(null);
   const [mainImageIndex, setMainImageIndex] = useState(0);
 
@@ -235,12 +235,12 @@ export default function Soonsoo() {
     <ContentBox>
       <ol>
         <li>
-          <ContentTitle>렛츠고 리딩</ContentTitle>
+          <ContentTitle>위메프 - PC 신규환경</ContentTitle>
           <ContentInnerBox>
             <div className="slide-box">
               <Swiper {...swiperParams} ref={setSwiper}>
                 {ImageData &&
-                  ImageData.Soonsoo.map((list) => {
+                  ImageData.Wemakeprice01.map((list) => {
                     return (
                       <SwiperSlide key={list.id}>
                         <SwiperSlideBox>
@@ -260,9 +260,7 @@ export default function Soonsoo() {
             <div className="info-box">
               <div>
                 <p className="project">
-                  메인 화면, 기프트샵, 상품 구매, 이벤트 및 공지사항 게시판
-                  페이지 등 전체적인 사이트 리뉴얼 작업을 진행하였고, 기존
-                  사이트 운영 및 개발을 진행하였습니다.
+                  기존 레거시 시스템을 React, Next.js 기반으로 PC 개편 작업을 진행하고 있습니다.
                 </p>
               </div>
               <div>
@@ -271,29 +269,103 @@ export default function Soonsoo() {
                 </p>
                 <ProjectContent>
                   <li>
-                    사이트 리뉴얼
-                    <ul>
-                      <li>회원가입</li>
-                      <li>기프트샵</li>
-                      <li>주문</li>
-                      <li>게시판</li>
-                    </ul>
+                    자주 묻는 질문
+                    <a
+                      href="https://front.wd.wemakeprice.com/cs/faq"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      (링크)
+                    </a>
                   </li>
-                  <li>각종 프로모션 랜딩 페이지</li>
-                  <li>유지보수</li>
+                  <li>
+                    제안하기
+                    <a
+                      href="https://front.wd.wemakeprice.com/cs/proposal"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      (링크)
+                    </a>  
+                  </li>
+                </ProjectContent>
+              </div>
+              <div>
+                <p>
+                  <strong>사용 기술</strong> Next.js, React, Recoil, HTML, JavaScript
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>개발 환경</strong>Git, Jira, Confluence
+                </p>
+              </div>
+            </div>
+          </ContentInnerBox>
+        </li>
+        <li>
+          <ContentTitle>위메프</ContentTitle>
+          <ContentInnerBox>
+            <div className="slide-box">
+              <Swiper {...swiperParams} ref={setSwiper}>
+                {ImageData &&
+                  ImageData.Wemakeprice02.map((list) => {
+                    return (
+                      <SwiperSlide key={list.id}>
+                        <SwiperSlideBox>
+                          <div>
+                            <span
+                              style={{
+                                backgroundImage: `url(${list.url})`,
+                              }}
+                            ></span>
+                          </div>
+                        </SwiperSlideBox>
+                      </SwiperSlide>
+                    );
+                  })}
+              </Swiper>
+            </div>
+            <div className="info-box">
+              <div>
+                <p className="project">
+                  위메프 메인 사이트의 운영 개발 및 유지보수를 진행하고 있습니다.
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>주요 작업</strong>
+                </p>
+                <ProjectContent>
+                  <li>
+                    MW 찜리스트 - 상품/딜, 가격비교
+                    <a
+                      href="https://mw.wemakeprice.com/mypage/wishlist"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      (링크)
+                    </a>
+                  </li>
+                  <li>MW 타임특가</li>
                 </ProjectContent>
               </div>
               <div>
                 <p>
                   <strong>참조 링크</strong>
-                  <a href="http://www.letsgoreading.com/" rel="noreferrer" target="_blank">
-                    http://www.letsgoreading.com/
+                  <a href="https://front.wemakeprice.com/main" rel="noreferrer" target="_blank">
+                    https://front.wemakeprice.com/main
                   </a>
                 </p>
               </div>
               <div>
                 <p>
-                  <strong>사용 기술</strong> HTML, CSS3, JQuery, JavaScript
+                  <strong>사용 기술</strong>HTML, JavaScript, JQuery, Handlebars
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>개발 환경</strong>Git, Jira, Confluence
                 </p>
               </div>
             </div>

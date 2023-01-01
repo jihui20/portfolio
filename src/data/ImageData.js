@@ -16,6 +16,11 @@ import Yanadoo1_04 from '../assets/images/img_yanadoo1_04.png';
 import Soonsoo_01 from '../assets/images/img_soonsoo_01.png';
 import Soonsoo_02 from '../assets/images/img_soonsoo_02.png';
 import Soonsoo_03 from '../assets/images/img_soonsoo_03.png';
+import Wemakeprice from '../assets/images/img_wemakeprice.png';
+import Wemakeprice1_01 from '../assets/images/img_wemakeprice1_01.png';
+import Wemakeprice1_02 from '../assets/images/img_wemakeprice1_02.png';
+import Wemakeprice2_01 from '../assets/images/img_wemakeprice2_01.png';
+import Wemakeprice2_02 from '../assets/images/img_wemakeprice2_02.png'
 
 let Yanadoo3 = [
   { id: 1, url: Yanadoo3_01 },
@@ -50,12 +55,26 @@ let Soonsoo = [
   { id: 3, url: Soonsoo_03 },
 ];
 
+let Wemakeprice01 = [
+  { id:1, url: Wemakeprice },
+  { id:2, url: Wemakeprice1_01 },
+  { id:3, url: Wemakeprice1_02 },
+]
+
+let Wemakeprice02 = [
+  { id:1, url: Wemakeprice },
+  { id:2, url: Wemakeprice2_01 },
+  { id:3, url: Wemakeprice2_02 },
+]
+
 const ImageData = {
   Yanadoo3,
   Kkultube,
   YanadooAdmin,
   Yanadoo1,
   Soonsoo,
+  Wemakeprice01,
+  Wemakeprice02
 };
 
 export default ImageData;

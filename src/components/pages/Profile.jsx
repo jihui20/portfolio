@@ -79,18 +79,19 @@ export default function Profile() {
         <dd>
           <p>
             <span>포트폴리오</span>
-            <a href="https://github.com/jihui20/portfolio" target="_blank">
+            <a href="https://github.com/jihui20/portfolio" rel="noreferrer" target="_blank">
               GitHub
             </a>
           </p>
           <p>
             <span>스터디</span>
-            <a href="https://github.com/jihui20/study" target="_blank">
+            <a href="https://github.com/jihui20/study" rel="noreferrer" target="_blank">
               GitHub
             </a>
             , &nbsp;
             <a
               href="https://splashy-people-e87.notion.site/STUDY-f8fcba9f746b41a8a1b25f82e5585871"
+              rel="noreferrer"
               target="_blank"
             >
               Notion
