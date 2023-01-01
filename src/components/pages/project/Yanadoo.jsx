@@ -9,203 +9,6 @@ import 'swiper/components/navigation/navigation.min.css';
 
 import ImageData from '../../../data/ImageData';
 
-const ContentBox = styled.div`
-  ol {
-    > li {
-      padding: 4rem 0;
-      background-color: #fff;
-      border-radius: 2rem;
-      box-sizing: border-box;
-
-      + li {
-        margin-top: 3rem;
-      }
-
-      .swiper-container {
-        padding-bottom: 3rem;
-      }
-
-      .swiper-pagination-fraction,
-      .swiper-pagination-custom,
-      .swiper-container-horizontal > .swiper-pagination-bullets {
-        bottom: 0;
-      }
-
-      .swiper-pagination-bullet-active {
-        padding: 0 1rem;
-        background-color: #fd9956;
-        border-radius: 2rem;
-      }
-    }
-  }
-`;
-
-const ContentInnerBox = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 2.5rem;
-
-  .slide-box {
-    flex: 0 1 auto;
-    width: 46%;
-    margin-right: 1rem;
-  }
-
-  .info-box {
-    flex: 0 1 auto;
-    width: 50%;
-    margin-top: 1rem;
-
-    div {
-      p {
-        font-weight: 300;
-        font-size: 1.6rem;
-        line-height: 1.4;
-        word-break: keep-all;
-      }
-
-      + div {
-        margin-top: 2rem;
-      }
-
-      strong {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-size: 1.8rem;
-      }
-
-      .no-use {
-        text-decoration: line-through;
-      }
-    }
-
-    a {
-      color: #000;
-      border-bottom: 1px solid #000;
-    }
-
-    .project {
-      font-weight: 500;
-      text-indent: -1.5rem;
-
-      &::before {
-        content: '';
-        display: inline-block;
-        width: 0.9rem;
-        height: 0.5rem;
-        margin: 0.45rem 0.5rem 0 0;
-        border: 0.2rem solid #000;
-        border-top: 0;
-        border-right: 0;
-        vertical-align: top;
-        transform: rotate(-45deg);
-      }
-    }
-  }
-
-  @media ${({ theme }) => theme.device.mobile} {
-    .slide-box {
-      flex: 0 1 auto;
-      width: 100%;
-      margin: 0;
-    }
-
-    .info-box {
-      flex: 0 1 auto;
-      width: 100%;
-      padding: 0 2rem;
-
-      div {
-        p {
-          font-size: 1.4rem;
-        }
-
-        strong {
-          font-size: 1.6rem;
-        }
-      }
-
-      a {
-        font-size: 1.4rem;
-      }
-
-      .project {
-        font-size: 1.5rem;
-      }
-    }
-  }
-`;
-
-const ContentTitle = styled.p`
-  display: inline-block;
-  position: relative;
-  font-weight: 800;
-  font-size: 2.3rem;
-  z-index: 1;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 1rem;
-    background-color: #fd9956;
-    z-index: -1;
-  }
-
-  @media ${({ theme }) => theme.device.mobile} {
-    font-size: 2rem;
-  }
-`;
-
-const ProjectContent = styled.ul`
-  li {
-    font-weight: 300;
-    line-height: 1.5;
-    word-break: keep-all;
-
-    &::before {
-      content: '-';
-      display: inline-block;
-      margin-right: 0.5rem;
-    }
-  }
-
-  @media ${({ theme }) => theme.device.mobile} {
-    font-size: 1.4rem;
-  }
-`;
-
-const SwiperSlideBox = styled.picture`
-  display: block;
-  width: 100%;
-
-  div {
-    position: relative;
-    padding-bottom: 70%;
-    overflow: hidden;
-  }
-
-  span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-  }
-
-  @media ${({ theme }) => theme.device.mobile} {
-    width: 100%;
-  }
-`;
-
 export default function Yanadoo() {
   const [, setSwiper] = useState(null);
   const [mainImageIndex, setMainImageIndex] = useState(0);
@@ -506,3 +309,200 @@ export default function Yanadoo() {
     </ContentBox>
   );
 }
+
+const ContentBox = styled.div`
+  ol {
+    > li {
+      padding: 4rem 0;
+      background-color: #fff;
+      border-radius: 2rem;
+      box-sizing: border-box;
+
+      + li {
+        margin-top: 3rem;
+      }
+
+      .swiper-container {
+        padding-bottom: 3rem;
+      }
+
+      .swiper-pagination-fraction,
+      .swiper-pagination-custom,
+      .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 0;
+      }
+
+      .swiper-pagination-bullet-active {
+        padding: 0 1rem;
+        background-color: #fd9956;
+        border-radius: 2rem;
+      }
+    }
+  }
+`;
+
+const ContentInnerBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+
+  .slide-box {
+    flex: 0 1 auto;
+    width: 46%;
+    margin-right: 1rem;
+  }
+
+  .info-box {
+    flex: 0 1 auto;
+    width: 50%;
+    margin-top: 1rem;
+
+    div {
+      p {
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 1.4;
+        word-break: keep-all;
+      }
+
+      + div {
+        margin-top: 2rem;
+      }
+
+      strong {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 1.8rem;
+      }
+
+      .no-use {
+        text-decoration: line-through;
+      }
+    }
+
+    a {
+      color: #000;
+      border-bottom: 1px solid #000;
+    }
+
+    .project {
+      font-weight: 500;
+      text-indent: -1.5rem;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 0.9rem;
+        height: 0.5rem;
+        margin: 0.45rem 0.5rem 0 0;
+        border: 0.2rem solid #000;
+        border-top: 0;
+        border-right: 0;
+        vertical-align: top;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    .slide-box {
+      flex: 0 1 auto;
+      width: 100%;
+      margin: 0;
+    }
+
+    .info-box {
+      flex: 0 1 auto;
+      width: 100%;
+      padding: 0 2rem;
+
+      div {
+        p {
+          font-size: 1.4rem;
+        }
+
+        strong {
+          font-size: 1.6rem;
+        }
+      }
+
+      a {
+        font-size: 1.4rem;
+      }
+
+      .project {
+        font-size: 1.5rem;
+      }
+    }
+  }
+`;
+
+const ContentTitle = styled.p`
+  display: inline-block;
+  position: relative;
+  font-weight: 800;
+  font-size: 2.3rem;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1rem;
+    background-color: #fd9956;
+    z-index: -1;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 2rem;
+  }
+`;
+
+const ProjectContent = styled.ul`
+  li {
+    font-weight: 300;
+    line-height: 1.5;
+    word-break: keep-all;
+
+    &::before {
+      content: '-';
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 1.4rem;
+  }
+`;
+
+const SwiperSlideBox = styled.picture`
+  display: block;
+  width: 100%;
+
+  div {
+    position: relative;
+    padding-bottom: 70%;
+    overflow: hidden;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    width: 100%;
+  }
+`;

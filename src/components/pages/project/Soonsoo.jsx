@@ -9,6 +9,104 @@ import 'swiper/components/navigation/navigation.min.css';
 
 import ImageData from '../../../data/ImageData';
 
+export default function Soonsoo() {
+  const [, setSwiper] = useState(null);
+  const [mainImageIndex, setMainImageIndex] = useState(0);
+
+  SwiperCore.use([Pagination, Autoplay, Navigation]);
+
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+
+  const swiperParams = {
+    // navigation: {
+    //   prevEl: navigationPrevRef.current,
+    //   nextEl: navigationNextRef.current,
+    // },
+    pagination: { clickable: true },
+    onBeforeInit: (swiper) => {
+      swiper.params.navigation.prevEl = navigationPrevRef.current;
+      swiper.params.navigation.nextEl = navigationNextRef.current;
+      swiper.activeIndex = mainImageIndex;
+      swiper.navigation.update();
+    },
+    onSwiper: setSwiper,
+    onSlideChange: (e) => setMainImageIndex(e.activeIndex),
+  };
+
+  return (
+    <ContentBox>
+      <ol>
+        <li>
+          <ContentTitle>렛츠고 리딩</ContentTitle>
+          <ContentInnerBox>
+            <div className="slide-box">
+              <Swiper {...swiperParams} ref={setSwiper}>
+                {ImageData &&
+                  ImageData.Soonsoo.map((list) => {
+                    return (
+                      <SwiperSlide key={list.id}>
+                        <SwiperSlideBox>
+                          <div>
+                            <span
+                              style={{
+                                backgroundImage: `url(${list.url})`,
+                              }}
+                            ></span>
+                          </div>
+                        </SwiperSlideBox>
+                      </SwiperSlide>
+                    );
+                  })}
+              </Swiper>
+            </div>
+            <div className="info-box">
+              <div>
+                <p className="project">
+                  메인 화면, 기프트샵, 상품 구매, 이벤트 및 공지사항 게시판
+                  페이지 등 전체적인 사이트 리뉴얼 작업을 진행하였고, 기존
+                  사이트 운영 및 개발을 진행하였습니다.
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>주요 작업</strong>
+                </p>
+                <ProjectContent>
+                  <li>
+                    사이트 리뉴얼
+                    <ul>
+                      <li>회원가입</li>
+                      <li>기프트샵</li>
+                      <li>주문</li>
+                      <li>게시판</li>
+                    </ul>
+                  </li>
+                  <li>각종 프로모션 랜딩 페이지</li>
+                  <li>유지보수</li>
+                </ProjectContent>
+              </div>
+              <div>
+                <p>
+                  <strong>참조 링크</strong>
+                  <a href="http://www.letsgoreading.com/" rel="noreferrer" target="_blank">
+                    http://www.letsgoreading.com/
+                  </a>
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>사용 기술</strong> HTML, CSS3, JQuery, JavaScript
+                </p>
+              </div>
+            </div>
+          </ContentInnerBox>
+        </li>
+      </ol>
+    </ContentBox>
+  );
+}
+
 const ContentBox = styled.div`
   ol {
     > li {
@@ -205,101 +303,3 @@ const SwiperSlideBox = styled.picture`
     width: 100%;
   }
 `;
-
-export default function Soonsoo() {
-  const [, setSwiper] = useState(null);
-  const [mainImageIndex, setMainImageIndex] = useState(0);
-
-  SwiperCore.use([Pagination, Autoplay, Navigation]);
-
-  const navigationPrevRef = useRef(null);
-  const navigationNextRef = useRef(null);
-
-  const swiperParams = {
-    // navigation: {
-    //   prevEl: navigationPrevRef.current,
-    //   nextEl: navigationNextRef.current,
-    // },
-    pagination: { clickable: true },
-    onBeforeInit: (swiper) => {
-      swiper.params.navigation.prevEl = navigationPrevRef.current;
-      swiper.params.navigation.nextEl = navigationNextRef.current;
-      swiper.activeIndex = mainImageIndex;
-      swiper.navigation.update();
-    },
-    onSwiper: setSwiper,
-    onSlideChange: (e) => setMainImageIndex(e.activeIndex),
-  };
-
-  return (
-    <ContentBox>
-      <ol>
-        <li>
-          <ContentTitle>렛츠고 리딩</ContentTitle>
-          <ContentInnerBox>
-            <div className="slide-box">
-              <Swiper {...swiperParams} ref={setSwiper}>
-                {ImageData &&
-                  ImageData.Soonsoo.map((list) => {
-                    return (
-                      <SwiperSlide key={list.id}>
-                        <SwiperSlideBox>
-                          <div>
-                            <span
-                              style={{
-                                backgroundImage: `url(${list.url})`,
-                              }}
-                            ></span>
-                          </div>
-                        </SwiperSlideBox>
-                      </SwiperSlide>
-                    );
-                  })}
-              </Swiper>
-            </div>
-            <div className="info-box">
-              <div>
-                <p className="project">
-                  메인 화면, 기프트샵, 상품 구매, 이벤트 및 공지사항 게시판
-                  페이지 등 전체적인 사이트 리뉴얼 작업을 진행하였고, 기존
-                  사이트 운영 및 개발을 진행하였습니다.
-                </p>
-              </div>
-              <div>
-                <p>
-                  <strong>주요 작업</strong>
-                </p>
-                <ProjectContent>
-                  <li>
-                    사이트 리뉴얼
-                    <ul>
-                      <li>회원가입</li>
-                      <li>기프트샵</li>
-                      <li>주문</li>
-                      <li>게시판</li>
-                    </ul>
-                  </li>
-                  <li>각종 프로모션 랜딩 페이지</li>
-                  <li>유지보수</li>
-                </ProjectContent>
-              </div>
-              <div>
-                <p>
-                  <strong>참조 링크</strong>
-                  <a href="http://www.letsgoreading.com/" rel="noreferrer" target="_blank">
-                    http://www.letsgoreading.com/
-                  </a>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <strong>사용 기술</strong> HTML, CSS3, JQuery, JavaScript
-                </p>
-              </div>
-            </div>
-          </ContentInnerBox>
-        </li>
-      </ol>
-    </ContentBox>
-  );
-}

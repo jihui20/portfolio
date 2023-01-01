@@ -9,6 +9,176 @@ import 'swiper/components/navigation/navigation.min.css';
 
 import ImageData from '../../../data/ImageData';
 
+export default function Wemakeprice() {
+  const [, setSwiper] = useState(null);
+  const [mainImageIndex, setMainImageIndex] = useState(0);
+
+  SwiperCore.use([Pagination, Autoplay, Navigation]);
+
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+
+  const swiperParams = {
+    // navigation: {
+    //   prevEl: navigationPrevRef.current,
+    //   nextEl: navigationNextRef.current,
+    // },
+    pagination: { clickable: true },
+    onBeforeInit: (swiper) => {
+      swiper.params.navigation.prevEl = navigationPrevRef.current;
+      swiper.params.navigation.nextEl = navigationNextRef.current;
+      swiper.activeIndex = mainImageIndex;
+      swiper.navigation.update();
+    },
+    onSwiper: setSwiper,
+    onSlideChange: (e) => setMainImageIndex(e.activeIndex),
+  };
+
+  return (
+    <ContentBox>
+      <ol>
+        <li>
+          <ContentTitle>위메프 - PC 신규환경</ContentTitle>
+          <ContentInnerBox>
+            <div className="slide-box">
+              <Swiper {...swiperParams} ref={setSwiper}>
+                {ImageData &&
+                  ImageData.Wemakeprice01.map((list) => {
+                    return (
+                      <SwiperSlide key={list.id}>
+                        <SwiperSlideBox>
+                          <div>
+                            <span
+                              style={{
+                                backgroundImage: `url(${list.url})`,
+                              }}
+                            ></span>
+                          </div>
+                        </SwiperSlideBox>
+                      </SwiperSlide>
+                    );
+                  })}
+              </Swiper>
+            </div>
+            <div className="info-box">
+              <div>
+                <p className="project">
+                  기존 레거시 시스템을 React, Next.js 기반으로 PC 개편 작업을 진행하고 있습니다.
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>주요 작업</strong>
+                </p>
+                <ProjectContent>
+                  <li>
+                    자주 묻는 질문
+                    <a
+                      href="https://front.wd.wemakeprice.com/cs/faq"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      (링크)
+                    </a>
+                  </li>
+                  <li>
+                    제안하기
+                    <a
+                      href="https://front.wd.wemakeprice.com/cs/proposal"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      (링크)
+                    </a>  
+                  </li>
+                </ProjectContent>
+              </div>
+              <div>
+                <p>
+                  <strong>사용 기술</strong> Next.js, React, Recoil, HTML, JavaScript
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>개발 환경</strong>Git, Jira, Confluence
+                </p>
+              </div>
+            </div>
+          </ContentInnerBox>
+        </li>
+        <li>
+          <ContentTitle>위메프</ContentTitle>
+          <ContentInnerBox>
+            <div className="slide-box">
+              <Swiper {...swiperParams} ref={setSwiper}>
+                {ImageData &&
+                  ImageData.Wemakeprice02.map((list) => {
+                    return (
+                      <SwiperSlide key={list.id}>
+                        <SwiperSlideBox>
+                          <div>
+                            <span
+                              style={{
+                                backgroundImage: `url(${list.url})`,
+                              }}
+                            ></span>
+                          </div>
+                        </SwiperSlideBox>
+                      </SwiperSlide>
+                    );
+                  })}
+              </Swiper>
+            </div>
+            <div className="info-box">
+              <div>
+                <p className="project">
+                  위메프 메인 사이트의 운영 개발 및 유지보수를 진행하고 있습니다.
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>주요 작업</strong>
+                </p>
+                <ProjectContent>
+                  <li>
+                    MW 찜리스트 - 상품/딜, 가격비교
+                    <a
+                      href="https://mw.wemakeprice.com/mypage/wishlist"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      (링크)
+                    </a>
+                  </li>
+                  <li>MW 타임특가</li>
+                </ProjectContent>
+              </div>
+              <div>
+                <p>
+                  <strong>참조 링크</strong>
+                  <a href="https://front.wemakeprice.com/main" rel="noreferrer" target="_blank">
+                    https://front.wemakeprice.com/main
+                  </a>
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>사용 기술</strong>HTML, JavaScript, JQuery, Handlebars
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>개발 환경</strong>Git, Jira, Confluence
+                </p>
+              </div>
+            </div>
+          </ContentInnerBox>
+        </li>
+      </ol>
+    </ContentBox>
+  );
+}
+
 const ContentBox = styled.div`
   ol {
     > li {
@@ -205,173 +375,3 @@ const SwiperSlideBox = styled.picture`
     width: 100%;
   }
 `;
-
-export default function Wemakeprice() {
-  const [, setSwiper] = useState(null);
-  const [mainImageIndex, setMainImageIndex] = useState(0);
-
-  SwiperCore.use([Pagination, Autoplay, Navigation]);
-
-  const navigationPrevRef = useRef(null);
-  const navigationNextRef = useRef(null);
-
-  const swiperParams = {
-    // navigation: {
-    //   prevEl: navigationPrevRef.current,
-    //   nextEl: navigationNextRef.current,
-    // },
-    pagination: { clickable: true },
-    onBeforeInit: (swiper) => {
-      swiper.params.navigation.prevEl = navigationPrevRef.current;
-      swiper.params.navigation.nextEl = navigationNextRef.current;
-      swiper.activeIndex = mainImageIndex;
-      swiper.navigation.update();
-    },
-    onSwiper: setSwiper,
-    onSlideChange: (e) => setMainImageIndex(e.activeIndex),
-  };
-
-  return (
-    <ContentBox>
-      <ol>
-        <li>
-          <ContentTitle>위메프 - PC 신규환경</ContentTitle>
-          <ContentInnerBox>
-            <div className="slide-box">
-              <Swiper {...swiperParams} ref={setSwiper}>
-                {ImageData &&
-                  ImageData.Wemakeprice01.map((list) => {
-                    return (
-                      <SwiperSlide key={list.id}>
-                        <SwiperSlideBox>
-                          <div>
-                            <span
-                              style={{
-                                backgroundImage: `url(${list.url})`,
-                              }}
-                            ></span>
-                          </div>
-                        </SwiperSlideBox>
-                      </SwiperSlide>
-                    );
-                  })}
-              </Swiper>
-            </div>
-            <div className="info-box">
-              <div>
-                <p className="project">
-                  기존 레거시 시스템을 React, Next.js 기반으로 PC 개편 작업을 진행하고 있습니다.
-                </p>
-              </div>
-              <div>
-                <p>
-                  <strong>주요 작업</strong>
-                </p>
-                <ProjectContent>
-                  <li>
-                    자주 묻는 질문
-                    <a
-                      href="https://front.wd.wemakeprice.com/cs/faq"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      (링크)
-                    </a>
-                  </li>
-                  <li>
-                    제안하기
-                    <a
-                      href="https://front.wd.wemakeprice.com/cs/proposal"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      (링크)
-                    </a>  
-                  </li>
-                </ProjectContent>
-              </div>
-              <div>
-                <p>
-                  <strong>사용 기술</strong> Next.js, React, Recoil, HTML, JavaScript
-                </p>
-              </div>
-              <div>
-                <p>
-                  <strong>개발 환경</strong>Git, Jira, Confluence
-                </p>
-              </div>
-            </div>
-          </ContentInnerBox>
-        </li>
-        <li>
-          <ContentTitle>위메프</ContentTitle>
-          <ContentInnerBox>
-            <div className="slide-box">
-              <Swiper {...swiperParams} ref={setSwiper}>
-                {ImageData &&
-                  ImageData.Wemakeprice02.map((list) => {
-                    return (
-                      <SwiperSlide key={list.id}>
-                        <SwiperSlideBox>
-                          <div>
-                            <span
-                              style={{
-                                backgroundImage: `url(${list.url})`,
-                              }}
-                            ></span>
-                          </div>
-                        </SwiperSlideBox>
-                      </SwiperSlide>
-                    );
-                  })}
-              </Swiper>
-            </div>
-            <div className="info-box">
-              <div>
-                <p className="project">
-                  위메프 메인 사이트의 운영 개발 및 유지보수를 진행하고 있습니다.
-                </p>
-              </div>
-              <div>
-                <p>
-                  <strong>주요 작업</strong>
-                </p>
-                <ProjectContent>
-                  <li>
-                    MW 찜리스트 - 상품/딜, 가격비교
-                    <a
-                      href="https://mw.wemakeprice.com/mypage/wishlist"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      (링크)
-                    </a>
-                  </li>
-                  <li>MW 타임특가</li>
-                </ProjectContent>
-              </div>
-              <div>
-                <p>
-                  <strong>참조 링크</strong>
-                  <a href="https://front.wemakeprice.com/main" rel="noreferrer" target="_blank">
-                    https://front.wemakeprice.com/main
-                  </a>
-                </p>
-              </div>
-              <div>
-                <p>
-                  <strong>사용 기술</strong>HTML, JavaScript, JQuery, Handlebars
-                </p>
-              </div>
-              <div>
-                <p>
-                  <strong>개발 환경</strong>Git, Jira, Confluence
-                </p>
-              </div>
-            </div>
-          </ContentInnerBox>
-        </li>
-      </ol>
-    </ContentBox>
-  );
-}
