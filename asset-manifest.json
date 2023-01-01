@@ -1,15 +1,18 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.bba2fa61.css",
-    "main.js": "/portfolio/static/js/main.dd2e1129.js",
+    "main.js": "/portfolio/static/js/main.9d8cb17e.js",
     "static/media/img_yanadoo1_01.png": "/portfolio/static/media/img_yanadoo1_01.833c3a4e3577ce0525bc.png",
     "static/media/img_yanadoo1_02.png": "/portfolio/static/media/img_yanadoo1_02.e5027e3f7f3ef0242636.png",
     "static/media/img_yanadoo3_05.png": "/portfolio/static/media/img_yanadoo3_05.c099f860ebd4293c62bb.png",
     "static/media/img_soonsoo_01.png": "/portfolio/static/media/img_soonsoo_01.6945ac0f59c6f69e0f89.png",
     "static/media/img_yanadoo2_admin_01.png": "/portfolio/static/media/img_yanadoo2_admin_01.33110bd5690e2b383a27.png",
     "static/media/img_yanadoo1_03.png": "/portfolio/static/media/img_yanadoo1_03.0cfbf57e24dcf374d692.png",
+    "static/media/img_wemakeprice1_02.png": "/portfolio/static/media/img_wemakeprice1_02.2a7b16d5188ad5b417ab.png",
+    "static/media/img_wemakeprice.png": "/portfolio/static/media/img_wemakeprice.e5e77b7fc495b03f87b7.png",
     "static/media/img_yanadoo1_04.png": "/portfolio/static/media/img_yanadoo1_04.c625db6bf4f61963c0d4.png",
     "static/media/img_kkultube_01.png": "/portfolio/static/media/img_kkultube_01.317651bf91c83e20f148.png",
+    "static/media/img_wemakeprice2_01.png": "/portfolio/static/media/img_wemakeprice2_01.ce1b0f8b15187f2a80de.png",
     "static/media/img_soonsoo_02.png": "/portfolio/static/media/img_soonsoo_02.a7c9c05919d872eb5ef4.png",
     "static/media/img_soonsoo_03.png": "/portfolio/static/media/img_soonsoo_03.23a71bd16b2312be0d7d.png",
     "static/media/img_kkultube_02.png": "/portfolio/static/media/img_kkultube_02.ab45fd2ede87a02a1ba1.png",
@@ -24,6 +27,7 @@
     "static/media/SpoqaHanSansNeo-Light.eot": "/portfolio/static/media/SpoqaHanSansNeo-Light.341aef6c15c9c5afdc09.eot",
     "static/media/img_yanadoo2_admin_02.png": "/portfolio/static/media/img_yanadoo2_admin_02.4e0aa73b3063e08004ca.png",
     "static/media/img_yanadoo2_admin_04.png": "/portfolio/static/media/img_yanadoo2_admin_04.16663cfa27793c1fc75b.png",
+    "static/media/img_wemakeprice2_02.png": "/portfolio/static/media/img_wemakeprice2_02.4e63e6c328ae53615d9e.png",
     "static/media/img_yanadoo2_admin_03.png": "/portfolio/static/media/img_yanadoo2_admin_03.37bf1c3616409e09881a.png",
     "static/media/SpoqaHanSansNeo-Bold.eot": "/portfolio/static/media/SpoqaHanSansNeo-Bold.07401071f91a6483c1fa.eot",
     "static/media/SpoqaHanSansNeo-Bold.woff": "/portfolio/static/media/SpoqaHanSansNeo-Bold.dc75532918fd412e27a3.woff",
@@ -40,6 +44,7 @@
     "static/media/SpoqaHanSansNeo-Medium.woff2": "/portfolio/static/media/SpoqaHanSansNeo-Medium.8589927a4fa35d637a8d.woff2",
     "static/media/SpoqaHanSansNeo-Light.woff2": "/portfolio/static/media/SpoqaHanSansNeo-Light.13ba65ce1663198528ba.woff2",
     "static/media/SpoqaHanSansNeo-Thin.woff2": "/portfolio/static/media/SpoqaHanSansNeo-Thin.9aab6330b7ba8adf7abf.woff2",
+    "static/media/img_wemakeprice1_01.png": "/portfolio/static/media/img_wemakeprice1_01.c822299c40810b48da56.png",
     "static/media/img_yanadoo3_02.png": "/portfolio/static/media/img_yanadoo3_02.d2eb2712e9f6c05ea529.png",
     "static/media/ico_html_v2.png": "/portfolio/static/media/ico_html_v2.1d7b133e22ffe4829da6.png",
     "static/media/ico_react.png": "/portfolio/static/media/ico_react.a97a4ba82cff76eba119.png",
@@ -48,10 +53,10 @@
     "static/media/ico_jquery.png": "/portfolio/static/media/ico_jquery.65c7eec1c12657b32035.png",
     "index.html": "/portfolio/index.html",
     "main.bba2fa61.css.map": "/portfolio/static/css/main.bba2fa61.css.map",
-    "main.dd2e1129.js.map": "/portfolio/static/js/main.dd2e1129.js.map"
+    "main.9d8cb17e.js.map": "/portfolio/static/js/main.9d8cb17e.js.map"
   },
   "entrypoints": [
     "static/css/main.bba2fa61.css",
-    "static/js/main.dd2e1129.js"
+    "static/js/main.9d8cb17e.js"
   ]
 }
