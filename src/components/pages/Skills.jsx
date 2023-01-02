@@ -10,6 +10,7 @@ import JavascriptIco from '../../assets/images/ico_javascript_v2.png';
 import JqueryIco from '../../assets/images/ico_jquery.png';
 import ReactIco from '../../assets/images/ico_react.png';
 import PhotoshopIco from '../../assets/images/ico_photoshop.png';
+import RecoilIco from '../../assets/images/ico_recoil.png';
 
 export default function Skill() {
   return (
@@ -62,7 +63,6 @@ const SkillListBox = styled.div`
   padding-bottom: 4rem;
 
   p {
-    margin-bottom: 3rem;
     font-size: 1.6rem;
     line-height: 1.5;
     word-break: keep-all;
@@ -74,22 +74,26 @@ const SkillListBox = styled.div`
     justify-content: space-between;
 
     li {
-      flex: 1 0 auto;
-      width: 31%;
-      margin: 1rem 1rem 1rem 0;
+      flex: 1 1 auto;
+      width: 100%;
+      margin: 1rem 0 1rem 0;
       font-weight: 800;
-      text-align: center;
       box-sizing: border-box;
 
-      &:nth-of-type(3n) {
-        margin-right: 0;
+      dl {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
       }
 
       dt {
+        flex: 1 0 auto;
+        width: 30%;
+
         .skill-thumb {
           display: block;
-          width: 10rem;
-          height: 15rem;
+          width: 7rem;
+          height: 10rem;
           margin: 0 auto;
           background-repeat: no-repeat;
           background-position: 50% 50%;
@@ -98,7 +102,8 @@ const SkillListBox = styled.div`
       }
 
       dd {
-        margin-top: 1.5rem;
+        flex: 1 0 auto;
+        width:70%;
         font-weight: 300;
 
         p {
@@ -154,23 +159,20 @@ const SkillListBox = styled.div`
           background-image: url(${PhotoshopIco});
         }
       }
+
+      &.recoil {
+        .skill-thumb {
+          width: 11rem;
+          background-image: url(${RecoilIco});
+        }
+      }
     }
   }
 
   @media ${({ theme }) => theme.device.tablet} {
     ul {
       li {
-        flex: 1 0 auto;
-        width: 47%;
-        margin: 0 1.5rem 1rem 0;
-
-        &:nth-of-type(2n) {
-          margin-right: 0;
-        }
-
-        &:nth-of-type(3n) {
-          margin-right: 1.5rem;
-        }
+        margin: 0 0 1rem 0;
       }
     }
   }
@@ -185,10 +187,25 @@ const SkillListBox = styled.div`
         flex: 1 0 auto;
         width: 100%;
         margin: 0 0 4rem 0;
+        text-align: center;
 
         &:nth-of-type(3n) {
           margin-right: 0;
         }
+        
+        dl { 
+          flex-wrap: wrap;
+        }
+
+        dt {
+          width: 100%;
+        }
+        
+        dd {
+          width: 100%;
+          margin-top: 2rem;
+        }
+      
       }
     }
   }
