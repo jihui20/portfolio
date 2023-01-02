@@ -11,6 +11,53 @@ import JqueryIco from '../../assets/images/ico_jquery.png';
 import ReactIco from '../../assets/images/ico_react.png';
 import PhotoshopIco from '../../assets/images/ico_photoshop.png';
 
+export default function Skill() {
+  return (
+    <CommonStyle.Section>
+      <CommonStyle.H3 showType="block">skills</CommonStyle.H3>
+      <SkillListBox>
+        <ul>
+          {SkillData &&
+            SkillData.map((list) => {
+              return (
+                <li
+                  key={`${list.skill}-${list.sortNum}`}
+                  className={list.skill.toLowerCase()}
+                >
+                  <dl>
+                    <dt>
+                      <span className="skill-thumb">
+                        <CommonStyle.Blind>
+                          {list.skill.toLowerCase()}
+                        </CommonStyle.Blind>
+                      </span>
+                    </dt>
+                    <dd>
+                      <p>
+                        {list.infoList &&
+                          list.infoList.map((infoList) => {
+                            return (
+                              <span
+                                key={`${list.skill.toLocaleLowerCase()}-sub-${
+                                  infoList.sortNum
+                                }`}
+                              >
+                                {infoList.desc}
+                              </span>
+                            );
+                          })}
+                      </p>
+                    </dd>
+                  </dl>
+                </li>
+              );
+            })}
+        </ul>
+      </SkillListBox>
+    </CommonStyle.Section>
+  );
+}
+
 const SkillListBox = styled.div`
   padding-bottom: 4rem;
 
@@ -146,50 +193,3 @@ const SkillListBox = styled.div`
     }
   }
 `;
-
-export default function Skill() {
-  return (
-    <CommonStyle.Section>
-      <CommonStyle.H3 showType="block">skills</CommonStyle.H3>
-      <SkillListBox>
-        <ul>
-          {SkillData &&
-            SkillData.map((list) => {
-              return (
-                <li
-                  key={`${list.skill}-${list.sortNum}`}
-                  className={list.skill.toLowerCase()}
-                >
-                  <dl>
-                    <dt>
-                      <span className="skill-thumb">
-                        <CommonStyle.Blind>
-                          {list.skill.toLowerCase()}
-                        </CommonStyle.Blind>
-                      </span>
-                    </dt>
-                    <dd>
-                      <p>
-                        {list.infoList &&
-                          list.infoList.map((infoList) => {
-                            return (
-                              <span
-                                key={`${list.skill.toLocaleLowerCase()}-sub-${
-                                  infoList.sortNum
-                                }`}
-                              >
-                                {infoList.desc}
-                              </span>
-                            );
-                          })}
-                      </p>
-                    </dd>
-                  </dl>
-                </li>
-              );
-            })}
-        </ul>
-      </SkillListBox>
-    </CommonStyle.Section>
-  );
-}

@@ -1,6 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 
+export default function Tab({ activeTab, handleActiveTab }) {
+  return (
+    <TabBox>
+      <ul>
+        <li className={activeTab === 'Wemakeprice' ? 'active' : null}>
+          <button type="button" onClick={() => handleActiveTab('Wemakeprice')}>
+            <span>위메프</span>
+          </button>
+        </li>
+        <li className={activeTab === 'Yanadoo' ? 'active' : null}>
+          <button type="button" onClick={() => handleActiveTab('Yanadoo')}>
+            <span>야나두</span>
+          </button>
+        </li>
+        <li className={activeTab === 'Soonsoo' ? 'active' : null}>
+          <button type="button" onClick={() => handleActiveTab('Soonsoo')}>
+            <span>순수교육</span>
+          </button>
+        </li>
+      </ul>
+    </TabBox>
+  );
+}
+
 const TabBox = styled.div`
   ul {
     display: flex;
@@ -31,27 +55,3 @@ const TabBox = styled.div`
     }
   }
 `;
-
-export default function Tab({ activeTab, handleActiveTab }) {
-  return (
-    <TabBox>
-      <ul>
-        <li className={activeTab === 'Wemakeprice' ? 'active' : null}>
-          <button type="button" onClick={() => handleActiveTab('Wemakeprice')}>
-            <span>위메프</span>
-          </button>
-        </li>
-        <li className={activeTab === 'Yanadoo' ? 'active' : null}>
-          <button type="button" onClick={() => handleActiveTab('Yanadoo')}>
-            <span>야나두</span>
-          </button>
-        </li>
-        <li className={activeTab === 'Soonsoo' ? 'active' : null}>
-          <button type="button" onClick={() => handleActiveTab('Soonsoo')}>
-            <span>순수교육</span>
-          </button>
-        </li>
-      </ul>
-    </TabBox>
-  );
-}

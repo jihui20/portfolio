@@ -8,6 +8,78 @@ import CommonStyle from '../assets/style/CommonStyle';
 
 import Logo from '../assets/images/ico_logo_310x310.png';
 
+export default function Header() {
+  const { pathname } = useLocation();
+
+  const [scrollActive, setScrollActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 750 });
+    return isMobile ? children : null;
+  };
+
+  const handleMobileMenu = () => {
+    setIsActive(!isActive);
+  };
+
+  function handleScroll() {
+    let scrollY = window.scrollY || document.documentElement.scrollTop;
+
+    setScrollActive(scrollY > 0);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
+  useEffect(() => {
+    setIsActive(false);
+  }, [pathname]);
+
+  return (
+    <HeaderLayout className={scrollActive ? 'fixed' : ''}>
+      <div className="inner">
+        <h1>
+          <Link to="/">
+            <img src={Logo} alt="logo" />
+          </Link>
+        </h1>
+        <NavLayout className={isActive ? 'active' : null}>
+          <ul>
+            {NavData &&
+              NavData.map((list) => {
+                return (
+                  <li key={list.sortNum}>
+                    <NavLink
+                      to={{
+                        pathname: list.path,
+                      }}
+                      className={({ isActive }) =>
+                        'nav-link' + (isActive ? ' active' : '')
+                      }
+                    >
+                      {list.title}
+                    </NavLink>
+                  </li>
+                );
+              })}
+          </ul>
+        </NavLayout>
+        <Mobile>
+          <HamburgerBtn type="button" onClick={handleMobileMenu}>
+            <CommonStyle.Blind>메뉴</CommonStyle.Blind>
+            <span className="ico-bar"></span>
+          </HamburgerBtn>
+        </Mobile>
+      </div>
+    </HeaderLayout>
+  );
+}
+
 const HeaderLayout = styled.header`
   position: relative;
   width: 100%;
@@ -159,75 +231,3 @@ const HamburgerBtn = styled.button`
     }
   }
 `;
-
-export default function Header() {
-  const { pathname } = useLocation();
-
-  const [scrollActive, setScrollActive] = useState(false);
-  const [isActive, setIsActive] = useState(false);
-
-  const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 750 });
-    return isMobile ? children : null;
-  };
-
-  const handleMobileMenu = () => {
-    setIsActive(!isActive);
-  };
-
-  function handleScroll() {
-    let scrollY = window.scrollY || document.documentElement.scrollTop;
-
-    setScrollActive(scrollY > 0);
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  });
-
-  useEffect(() => {
-    setIsActive(false);
-  }, [pathname]);
-
-  return (
-    <HeaderLayout className={scrollActive ? 'fixed' : ''}>
-      <div className="inner">
-        <h1>
-          <Link to="/">
-            <img src={Logo} alt="logo" />
-          </Link>
-        </h1>
-        <NavLayout className={isActive ? 'active' : null}>
-          <ul>
-            {NavData &&
-              NavData.map((list) => {
-                return (
-                  <li key={list.sortNum}>
-                    <NavLink
-                      to={{
-                        pathname: list.path,
-                      }}
-                      className={({ isActive }) =>
-                        'nav-link' + (isActive ? ' active' : '')
-                      }
-                    >
-                      {list.title}
-                    </NavLink>
-                  </li>
-                );
-              })}
-          </ul>
-        </NavLayout>
-        <Mobile>
-          <HamburgerBtn type="button" onClick={handleMobileMenu}>
-            <CommonStyle.Blind>메뉴</CommonStyle.Blind>
-            <span className="ico-bar"></span>
-          </HamburgerBtn>
-        </Mobile>
-      </div>
-    </HeaderLayout>
-  );
-}

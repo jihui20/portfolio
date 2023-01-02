@@ -474,10 +474,31 @@ const ProjectContent = styled.ul`
       display: inline-block;
       margin-right: 0.5rem;
     }
+
+    span {
+      display: block;
+      margin-left: 2.3rem;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: #888;
+      text-indent: -0.5rem;
+
+      &::before {
+      content: '-';
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+    }
   }
 
   @media ${({ theme }) => theme.device.mobile} {
     font-size: 1.4rem;
+
+    li {
+      span {
+        font-size: 1.1rem;
+      }
+    }
   }
 `;
 

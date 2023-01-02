@@ -11,17 +11,17 @@ const TAB = [
   {
     id: 1,
     name: 'Wemakeprice',
-    component: <Wemakeprice />
+    component: <Wemakeprice key="Wemakeprice"/>
   },
   {
     id: 2,
     name: 'Yanadoo',
-    component: <Yanadoo />
+    component: <Yanadoo key="Yanadoo"/>
   },
   {
     id: 3,
     name: 'Soonsoo',
-    component: <Soonsoo />
+    component: <Soonsoo key="Soonsoo"/>
   }
 ]
 export default function Project() {
@@ -41,7 +41,6 @@ export default function Project() {
           return item.component
         })
       }
-      <activeTab />
     </CommonStyle.Section>
   );
 }

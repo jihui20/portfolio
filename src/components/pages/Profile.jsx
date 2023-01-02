@@ -3,6 +3,43 @@ import styled from 'styled-components';
 
 import CommonStyle from '../../assets/style/CommonStyle';
 
+export default function Profile() {
+  return (
+    <CommonStyle.Section>
+      <CommonStyle.H3 showType="block">profile</CommonStyle.H3>
+      <ProfileBox>
+        <dt>연락처</dt>
+        <dd>010&ndash;9109&ndash;0479</dd>
+        <dt>이메일</dt>
+        <dd>dlwlgml20@gmail.com</dd>
+        <dt>Link</dt>
+        <dd>
+          <p>
+            <span>포트폴리오</span>
+            <a href="https://github.com/jihui20/portfolio" rel="noreferrer" target="_blank">
+              GitHub
+            </a>
+          </p>
+          <p>
+            <span>스터디</span>
+            <a href="https://github.com/jihui20/study" rel="noreferrer" target="_blank">
+              GitHub
+            </a>
+            , &nbsp;
+            <a
+              href="https://splashy-people-e87.notion.site/STUDY-f8fcba9f746b41a8a1b25f82e5585871"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Notion
+            </a>
+          </p>
+        </dd>
+      </ProfileBox>
+    </CommonStyle.Section>
+  );
+}
+
 const ProfileBox = styled.dl`
   display: flex;
   flex-wrap: wrap;
@@ -65,40 +102,3 @@ const ProfileBox = styled.dl`
     }
   }
 `;
-
-export default function Profile() {
-  return (
-    <CommonStyle.Section>
-      <CommonStyle.H3 showType="block">profile</CommonStyle.H3>
-      <ProfileBox>
-        <dt>연락처</dt>
-        <dd>010&ndash;9109&ndash;0479</dd>
-        <dt>이메일</dt>
-        <dd>dlwlgml20@gmail.com</dd>
-        <dt>Link</dt>
-        <dd>
-          <p>
-            <span>포트폴리오</span>
-            <a href="https://github.com/jihui20/portfolio" rel="noreferrer" target="_blank">
-              GitHub
-            </a>
-          </p>
-          <p>
-            <span>스터디</span>
-            <a href="https://github.com/jihui20/study" rel="noreferrer" target="_blank">
-              GitHub
-            </a>
-            , &nbsp;
-            <a
-              href="https://splashy-people-e87.notion.site/STUDY-f8fcba9f746b41a8a1b25f82e5585871"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Notion
-            </a>
-          </p>
-        </dd>
-      </ProfileBox>
-    </CommonStyle.Section>
-  );
-}

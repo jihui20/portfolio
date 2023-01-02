@@ -1,6 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
+export default function Footer() {
+  return (
+    <FooterBox>
+      <p className="copyright">&copy; 2022 JHui</p>
+    </FooterBox>
+  );
+}
+
 const FooterBox = styled.footer`
   padding: 3rem 0;
   text-align: center;
@@ -15,12 +23,3 @@ const FooterBox = styled.footer`
     }
   }
 `;
-
-
-export default function Footer() {
-  return (
-    <FooterBox>
-      <p className="copyright">&copy; 2022 JHui</p>
-    </FooterBox>
-  );
-}
