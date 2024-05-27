@@ -11,6 +11,7 @@ import JqueryIco from '../../assets/images/ico_jquery.png';
 import ReactIco from '../../assets/images/ico_react.png';
 import PhotoshopIco from '../../assets/images/ico_photoshop.png';
 import RecoilIco from '../../assets/images/ico_recoil.png';
+import NextJsIco from '../../assets/images/ico_nextjs.png';
 
 export default function Skill() {
   return (
@@ -103,7 +104,7 @@ const SkillListBox = styled.div`
 
       dd {
         flex: 1 0 auto;
-        width:70%;
+        width: 70%;
         font-weight: 300;
 
         p {
@@ -166,6 +167,13 @@ const SkillListBox = styled.div`
           background-image: url(${RecoilIco});
         }
       }
+
+      &.nextjs {
+        .skill-thumb {
+          width: 11rem;
+          background-image: url(${NextJsIco});
+        }
+      }
     }
   }
 
@@ -192,20 +200,19 @@ const SkillListBox = styled.div`
         &:nth-of-type(3n) {
           margin-right: 0;
         }
-        
-        dl { 
+
+        dl {
           flex-wrap: wrap;
         }
 
         dt {
           width: 100%;
         }
-        
+
         dd {
           width: 100%;
           margin-top: 2rem;
         }
-      
       }
     }
   }

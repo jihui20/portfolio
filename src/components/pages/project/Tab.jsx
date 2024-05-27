@@ -5,6 +5,11 @@ export default function Tab({ activeTab, handleActiveTab }) {
   return (
     <TabBox>
       <ul>
+        <li className={activeTab === 'Kidaristudio' ? 'active' : null}>
+          <button type="button" onClick={() => handleActiveTab('Kidaristudio')}>
+            <span>키다리스튜디오</span>
+          </button>
+        </li>
         <li className={activeTab === 'Wemakeprice' ? 'active' : null}>
           <button type="button" onClick={() => handleActiveTab('Wemakeprice')}>
             <span>위메프</span>

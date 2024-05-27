@@ -28,6 +28,17 @@
   },
   {
     "sortNum": 2,
+    "skill": "NEXTjs",
+    "percent": 50,
+    "infoList": [
+      {
+        "sortNum": 1,
+        "desc": "상황에 맞는 SSR, CSR 활용"
+      }
+    ]
+  },
+  {
+    "sortNum": 3,
     "skill": "HTML5",
     "percent": 95,
     "infoList": [
@@ -38,7 +49,7 @@
     ]
   },
   {
-    "sortNum": 3,
+    "sortNum": 4,
     "skill": "CSS3",
     "percent": 85,
     "infoList": [
@@ -57,7 +68,7 @@
     ]
   },
   {
-    "sortNum": 4,
+    "sortNum": 5,
     "skill": "JavaScript",
     "percent": 60,
     "infoList": [
@@ -76,7 +87,7 @@
     ]
   },
   {
-    "sortNum": 5,
+    "sortNum": 6,
     "skill": "JQuery",
     "percent": 70,
     "infoList": [
@@ -91,7 +102,7 @@
     ]
   },
   {
-    "sortNum": 6,
+    "sortNum": 7,
     "skill": "Photoshop",
     "percent": 60,
     "infoList": [

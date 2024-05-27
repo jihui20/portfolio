@@ -9,6 +9,19 @@ export default function Career() {
       <CommonStyle.H3 showType="block">work experience</CommonStyle.H3>
       <CareerBox>
         <dt>
+          키다리 스튜디오
+          <span>
+            2023년 7월 &ndash; 재직 중 &middot; Frontend Web Developer
+          </span>
+        </dt>
+        <dd>
+          키다리 스튜디오에서는 새로운 글로벌 플랫폼인 벨툰 AR(아랍)을 담당하여
+          오픈하였고, 일본 플랫폼인 벨툰 JP를 리뉴얼 오픈 하였습니다.
+          <br />
+          현재는 위 플랫폼들과 키다리 스튜디오의 메인 플랫폼인 봄툰 운영 및 유지
+          보수 개발을 진행하고 있습니다.
+        </dd>
+        <dt>
           위메프
           <span>
             2022년 6월 &ndash; 2023년 1월 &middot; Frontend Web Developer

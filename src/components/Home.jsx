@@ -12,9 +12,9 @@ export default function Home() {
     <>
       <CommonStyle.Section>
         <IntroduceBox>
-          <p className="name">
+          <MyName>
             이지희<span>Lee Ji Hui</span>
-          </p>
+          </MyName>
           <p>
             퍼블리셔로서 처음 시작을 하여 전체적인 사이트 유지 보수 및 프로모션
             작업을 진행하였고, 전체 사이트 리뉴얼을 진행하면서 주문/결제,
@@ -36,6 +36,11 @@ export default function Home() {
             유지 보수 작업을 진행했습니다. 또한 기존에 레거시 시스템으로
             되어있는 자주 묻는 질문, 제안하기 페이지들을 Next.js를 기반으로
             새롭게 개발하여 오픈했습니다.
+          </p>
+          <p>
+            현재는 키다리스튜디오에서 아랍, 일본, 한국을 대상으로 한 글로벌
+            플랫폼을 담당하여 오픈하였고, 앱 개발자와 함께 태국, 대만의 웹뷰
+            파트를 개발하고있습니다.
           </p>
         </IntroduceBox>
       </CommonStyle.Section>
@@ -59,32 +64,6 @@ const IntroduceBox = styled.div`
     + p {
       margin-top: 1.5rem;
     }
-
-    &.name {
-      display: inline-block;
-      position: relative;
-      font-weight: 500;
-      font-size: 4rem;
-      text-indent: 0;
-      z-index: 1;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 1rem;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 1.2rem;
-        background-color: #fd9956;
-        z-index: -1;
-      }
-
-      span {
-        font-weight: 300;
-        font-size: 2rem;
-      }
-    }
   }
 
   @media ${({ theme }) => theme.device.mobile} {
@@ -92,14 +71,40 @@ const IntroduceBox = styled.div`
 
     > p {
       font-size: 1.5rem;
+    }
+  }
+`;
 
-      &.name {
-        font-size: 3.5rem;
+const MyName = styled.h2`
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+  font-size: 4rem;
+  text-indent: 0;
+  z-index: 1;
 
-        span {
-          font-size: 1.7rem;
-        }
-      }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1.2rem;
+    background-color: #fd9956;
+    z-index: -1;
+  }
+
+  span {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    font-size: 3.5rem;
+
+    span {
+      font-size: 1.7rem;
     }
   }
 `;
