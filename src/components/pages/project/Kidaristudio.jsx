@@ -62,7 +62,10 @@ export default function Kidaristudio() {
             <div className="info-box">
               <div>
                 <p className="project">
-                  태국, 대만 AOS PLUS APP 웹뷰 페이지 작업 진행중입니다.
+                  태국, 대만 글로벌 플랫폼 신규 APP 서비스를 개발 중입니다.
+                  <br />
+                  APP의 웹뷰 파트 개발 담당으로 웹뷰 개발 업무와 앱 브릿지
+                  호출을 위한 코드 추가 및 개선 작업 진행합니다.
                 </p>
               </div>
               <div>
@@ -70,8 +73,10 @@ export default function Kidaristudio() {
                   <strong>주요 작업</strong>
                 </p>
                 <ProjectContent>
-                  <li>충전소</li>
-                  <li>내 서재</li>
+                  <li>코인 충전소 내 결제 수단, 쿠폰 영역</li>
+                  <li>
+                    내 서재(구매 작품, 최근 본 작품, 좋아효 한 작품 리스트)
+                  </li>
                   <li>알림 설정</li>
                 </ProjectContent>
               </div>
@@ -114,8 +119,14 @@ export default function Kidaristudio() {
             <div className="info-box">
               <div>
                 <p className="project">
-                  기존에 운영되고 있던 벨툰 JP 일본 플랫폼을 Next.js 기반으로
-                  리뉴얼 오픈하였습니다.
+                  해당 프로젝트는 일본 서비스 플랫폼인 벨툰JP를 새롭게
+                  리뉴얼하는 프로젝트입니다.
+                  <br />
+                  기존 React로 되어있던 플랫폼을 Next.js 기반으로 리뉴얼을
+                  진행했고,
+                  <br />
+                  해당 프로젝트에서 마이페이지 및 마이페이지와 연관되어 있는
+                  페이지들을 전체적으로 담당하여 개발하였습니다.
                 </p>
               </div>
               <div>
@@ -124,7 +135,8 @@ export default function Kidaristudio() {
                 </p>
                 <ProjectContent>
                   <li>
-                    선물함 / 쿠폰함 / 0엔티켓
+                    선물함 / 쿠폰함 / 0엔티켓함-무료로 볼 수 있는 작품 목록과
+                    무료 열람까지 남은 시간 노출
                     <a
                       href="https://www.beltoon.jp/app/benefit/gift"
                       rel="noreferrer"
@@ -134,7 +146,7 @@ export default function Kidaristudio() {
                     </a>
                   </li>
                   <li>
-                    마이 페이지(설정 / 내 서재 / 프로필 수정)
+                    마이 페이지 (설정, 프로필 수정, 내 서재 등)
                     <a
                       href="https://www.beltoon.jp/app/mypage"
                       rel="noreferrer"
@@ -194,11 +206,12 @@ export default function Kidaristudio() {
             <div className="info-box">
               <div>
                 <p className="project">
-                  새로운 글로벌 플랫폼인 벨툰 아랍을 메인으로 담당하여 개발 및
-                  오픈 진행하였습니다.
+                  아랍을 타겟으로 한 신규 플랫폼인 벨툰 AR을 메인으로 담당하여
+                  개발 및 서비스 오픈하였습니다.
                   <br />
                   오른쪽에서 왼쪽으로 읽는 언어를 사용하는 아랍의 특성에 맞게
-                  언어와 UI를 기존과 다른게 역방향으로 개발하였습니다.
+                  언어와 UI를 기존과 다른게 역방향으로 개발하였습니다.(HTML
+                  태그의 dir 속성 사용)
                 </p>
               </div>
               <div>
@@ -217,7 +230,7 @@ export default function Kidaristudio() {
                     </a>
                   </li>
                   <li>
-                    마이 페이지
+                    마이페이지(선물함, 쿠폰함, 내 서재, 댓글 등)
                     <a
                       href="https://www.beltoon.com/my"
                       rel="noreferrer"
@@ -268,8 +281,10 @@ export default function Kidaristudio() {
             <div className="info-box">
               <div>
                 <p className="project">
-                  키다리스튜디오의 메인 플랫폼을 운영 및 유지보수 진행하고
-                  있습니다.
+                  메인 플랫폼인 봄툰을 기존 React 환경에서 Next.js 환경으로
+                  리뉴얼 진행하였습니다.
+                  <br />
+                  전체적인 페이지의 이슈들을 처리, 개선 작업을 담당하였습니다.
                 </p>
               </div>
               <div>
