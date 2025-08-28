@@ -19,10 +19,6 @@ export default function Kidaristudio() {
   const navigationNextRef = useRef(null);
 
   const swiperParams = {
-    // navigation: {
-    //   prevEl: navigationPrevRef.current,
-    //   nextEl: navigationNextRef.current,
-    // },
     pagination: { clickable: true },
     onBeforeInit: (swiper) => {
       swiper.params.navigation.prevEl = navigationPrevRef.current;
@@ -37,6 +33,60 @@ export default function Kidaristudio() {
   return (
     <ContentBox>
       <ol>
+        <li>
+          <ContentTitle>독일, 프랑스 리브랜딩</ContentTitle>
+          <ContentInnerBox>
+            <div className="slide-box">
+              <Swiper {...swiperParams} ref={setSwiper}>
+                {ImageData?.Kidaristudio.map((list) => {
+                  return (
+                    <SwiperSlide key={list.id}>
+                      <SwiperSlideBox>
+                        <div>
+                          <span
+                            style={{
+                              backgroundImage: `url(${list.url})`,
+                            }}
+                          ></span>
+                        </div>
+                      </SwiperSlideBox>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
+            <div className="info-box">
+              <div>
+                <p className="project">
+                  독일, 프랑스의 리브랜딩 프로젝트입니다.
+                  <br />
+                  기존 코드 개선, 다국어 처리 기능 추가 작업 진행합니다. 다국어
+                  처리는 각 플랫폼의 언어를 설정 후, 해당되는 플랫폼의 언어를
+                  노출시키도록 작업하였습니다.
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>주요 작업</strong>
+                </p>
+                <ProjectContent>
+                  <li>플랫폼별 번역 문자열 반환 기능 추가</li>
+                </ProjectContent>
+              </div>
+              <div>
+                <p>
+                  <strong>사용 기술</strong>Next.js, React, HTML, JavaScript,
+                  styled-components
+                </p>
+              </div>
+              <div>
+                <p>
+                  <strong>개발 환경</strong>Git, Jira, Confluence
+                </p>
+              </div>
+            </div>
+          </ContentInnerBox>
+        </li>
         <li>
           <ContentTitle>태국, 대만 플러스 앱</ContentTitle>
           <ContentInnerBox>
@@ -62,7 +112,8 @@ export default function Kidaristudio() {
             <div className="info-box">
               <div>
                 <p className="project">
-                  태국, 대만 글로벌 플랫폼 신규 APP 서비스를 개발 중입니다.
+                  태국, 대만 글로벌 플랫폼 신규 APP 서비스를 개발하는
+                  프로젝트입니다.
                   <br />
                   APP의 웹뷰 파트 개발 담당으로 웹뷰 개발 업무와 앱 브릿지
                   호출을 위한 코드 추가 및 개선 작업 진행합니다.
@@ -82,7 +133,7 @@ export default function Kidaristudio() {
               </div>
               <div>
                 <p>
-                  <strong>사용 기술</strong>React, HTML, JavaScript,
+                  <strong>사용 기술</strong>Next.js, React, HTML, JavaScript,
                   styled-components
                 </p>
               </div>
